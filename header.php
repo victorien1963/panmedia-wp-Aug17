@@ -8,7 +8,10 @@
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
 		
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+		<!--<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
@@ -19,33 +22,5 @@
 			do_action( 'wp_body_open' );
 		}
 		?>
-		<!-- header -->
-		<header class="header main-header clear">
-			<nav id="main_navbar" class="navbar navbar-expand-lg fixed-top navbar-light">
-				<div class="container">
-					<a class="navbar-brand-link" href="<?php echo home_url(); ?>">
-						<div class="logo_wrap">
-							<?php
-							$custom_logo_id = get_theme_mod( 'custom_logo' );
-							$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-							if ( has_custom_logo() ) {
-									echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
-							} else {
-									echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
-							}
-							?>
-						</div>
-					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul id="menu-main-menu" class="navbar-nav ml-auto">
-							<?php pan_bootstrap_nav(); ?>
-						</ul>
-					</div>
-				</div>
-				<!-- /.container -->
-			</nav>
-		</header>
-		<!-- /header -->
+		<img src="<?php echo VB_THEME_URI; ?>src/imgs/logo/logo-top-white.png" class="logo-top">
+

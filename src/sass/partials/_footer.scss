@@ -9,3 +9,161 @@ footer.main-footer {
 		text-align: center;
 	}
 }
+
+/*Footer-background*/
+.footer-green{
+    margin: 0rem;
+    padding: 1.5rem 0rem .5rem 0rem;
+    background-color: #52b69a;
+    opacity: .8;
+}
+
+.footer-cyan{
+    margin: 0rem;
+    padding: 1rem 0rem 0rem 0rem;
+    background-color: #34a0a4;
+    opacity: .8;
+}
+
+.footer-blue{
+    margin: 0rem;
+    padding: 1rem .5rem;
+    background-color: #168aad;
+    opacity: .8;
+}
+
+.footer-blue > div > p {
+    margin: 0rem;
+    align-self: center;
+    color: #fff;
+    opacity: .7;
+}
+
+/*Social Media*/
+.socialmedia-icons > a{
+    align-self: center;
+    font-size: 2.7rem;
+    padding: .5rem;
+    color: rgb(217, 251, 252);
+    text-decoration: none;
+}
+
+.socialmedia-icons > a:hover{
+    color: #176a83;
+}
+
+/*1*/
+
+.footer-icons-table > table > tbody > tr {
+    align-self: center;
+}
+
+.footer-icons-table > table > tbody > tr > td {
+    text-align: center; 
+    border: 0;
+    width: 3rem;
+}
+
+.footer-icons-table > table > tbody > tr > td > p {
+    text-align: center; 
+    color:#fff;
+    font-weight: 800;
+    font-size: .9rem;
+    text-decoration: none;
+}
+
+.footer-icons-table > table > tbody > tr > td > a > img {
+    align-items: center;
+    width: 3rem;
+    height: auto;
+    margin: 0rem;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.footer-icons-table > table > tbody > tr > td > a > img:hover {
+    transform: scale(1.1);
+}
+
+#html5-video-player{
+    border-radius: .5rem;
+}
+
+/*創客基地*/
+
+.mark-link > div {
+    align-self: center;
+    text-align: left; 
+    color: #20333b;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 0;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.mark-link > div:hover {
+    color: #176a83;
+}
+
+/*加入我們*/
+.join-us > a p{
+    color:#2f7594;
+    font-weight: 600;
+    font-size: 1.3rem;
+    border: 0;
+    text-decoration: none;
+    text-align: left;
+    align-self: center;
+    margin-bottom: .5rem    
+}
+
+.join-us > a:hover{
+    color:#184558;   
+}
+
+@media screen and (max-width: 767px){
+
+    /* Footer bg color*/
+    .footer-blue > div > p{
+        font-size: .9rem;
+    }
+
+    .footer-green > div > p:nth-child(2){
+        display: none;
+    }
+
+    /* Footer icons table */
+    .footer-icons-table{
+        overflow-x: scroll;
+    }
+
+    .footer-icons-table > table > tbody > tr > td > p {
+        display: none;
+        font-size: .0001rem;
+    }
+
+    /* Marklink */
+    .mark-link{
+        flex-wrap: nowrap;
+    }
+
+    .mark-link > div {
+        font-size: .9rem;
+        text-align: center;
+        margin-right: 0rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Social Media */
+    .socialmedia-icons {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .socialmedia-icons > a {
+        padding: .5rem .7rem;
+    }
+
+}
