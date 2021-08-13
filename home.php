@@ -46,7 +46,7 @@ get_header(); ?>
 			<h2>以內容行銷建立企業深度影響力</h2>
 			<p>線上媒體企劃與線下品牌活動的策劃專家，以知識轉譯為基底，有效溝通消費者並深植人心</p>
 		</div>
-		<img src="<?echo $img_path;?>banner/carousel-6.JPG" class="d-block w-100 img-brightness" alt="...">
+		<img src="<?echo $img_path;?>banner/carousel-6.jpg" class="d-block w-100 img-brightness" alt="...">
 		</div>
 
 		<div class="carousel-item" data-bs-interval="5000">
@@ -54,7 +54,7 @@ get_header(); ?>
 			<h2>專精公共議題公關與教育推廣</h2>
 			<p>獲2018年經濟部新創事業金質獎，深度經營公共議題溝通，並創辦國中科普素養數位平台「科學生」</p>
 		</div>
-		<img src="<?echo $img_path;?>banner/carousel-9.JPG" class="d-block w-100 img-brightness" alt="...">
+		<img src="<?echo $img_path;?>banner/carousel-9.jpg" class="d-block w-100 img-brightness" alt="...">
 		</div>
 
 		<div class="carousel-item" data-bs-interval="5000">
@@ -62,7 +62,7 @@ get_header(); ?>
 			<h2>深耕地方創新基地以傳承創業經驗</h2>
 			<p>串聯台南胖地創客基地、南方創客基地與桃園新創育成空間， 積極育成新創事業</p>
 		</div>
-		<img src="<?echo $img_path;?>banner/carousel-10.JPG" class="d-block w-100 img-brightness" alt="...">
+		<img src="<?echo $img_path;?>banner/carousel-10.jpg" class="d-block w-100 img-brightness" alt="...">
 		</div>
 	</div>
 
