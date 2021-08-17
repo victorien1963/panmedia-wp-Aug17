@@ -15,17 +15,17 @@ $img_path = VB_THEME_URI.'src/imgs/';
         <table class="table">
         <tbody>
             <tr>
-            <td><a href="https://pansci.asia/" type="button" target="_blank"><img src="<?echo $img_path;?>icons/PanSci-icon.png"></a></td>
-            <td><a href="https://PanX.asia/" type="button" target="_blank"><img src="<?echo $img_path;?>icons/PanX-icon.png"></a></td>
-            <td><a href="https://pangogo.com/" type="button" target="_blank"><img src="<?echo $img_path;?>icons/Pangogo-icon-2.png"></a></td>
-            <td><a href="https://punchline.asia/" type="button" target="_blank"><img src="<?echo $img_path;?>icons/Punchline-icon.png"></a></td>
-            <td><a href="https://taster.life/" type="button" target="_blank"><img src="<?echo $img_path;?>icons/Taster-icon-2.png"></a></td>
-            <td><a href="https://pantravel.life/" type="button" target="_blank"><img src="<?echo $img_path;?>icons/Pantravel-icon-2.png"></a></td>
-            <td><a href="https://student.pansci.asia/" type="button" target="_blank"><img src="<?echo $img_path;?>icons/PanStudent-icon.png"></a></td>
-            <td><a href="https://panschool.asia/" type="button" target="_blank"><img src="<?echo $img_path;?>icons/Panschool-icon.png"></a></td>
-            <td><a href="https://panmarket.asia/" type="button" target="_blank"><img src="<?echo $img_path;?>icons/PanMarket-icon.png"></a></td>
-            <td><a href="https://events.panmedia.asia/" type="button" target="_blank"><img src="<?echo $img_path;?>icons/PanEvents-icon.png"></a></td>
-            <td><a href="https://pansci.asia/archives/118585" type="button" target="_blank"><img src="<?echo $img_path;?>icons/PanRead-icon.png"></a></td>
+            <td><a href="https://pansci.asia/" target="_blank"><img src="<?echo $img_path;?>icons/Pansci-icon.png"></a></td>
+            <td><a href="https://PanX.asia/" target="_blank"><img src="<?echo $img_path;?>icons/Panx-icon.png"></a></td>
+            <td><a href="https://pangogo.com/" target="_blank"><img src="<?echo $img_path;?>icons/Pangogo-icon-2.png"></a></td>
+            <td><a href="https://punchline.asia/" target="_blank"><img src="<?echo $img_path;?>icons/Punchline-icon.png"></a></td>
+            <td><a href="https://taster.life/" target="_blank"><img src="<?echo $img_path;?>icons/Taster-icon-2.png"></a></td>
+            <td><a href="https://pantravel.life/" target="_blank"><img src="<?echo $img_path;?>icons/Pantravel-icon-2.png"></a></td>
+            <td><a href="https://student.pansci.asia/" target="_blank"><img src="<?echo $img_path;?>icons/PanStudent-icon.png"></a></td>
+            <td><a href="https://panschool.asia/" target="_blank"><img src="<?echo $img_path;?>icons/Panschool-icon.png"></a></td>
+            <td><a href="https://panmarket.asia/" target="_blank"><img src="<?echo $img_path;?>icons/PanMarket-icon.png"></a></td>
+            <td><a href="https://events.panmedia.asia/" target="_blank"><img src="<?echo $img_path;?>icons/PanEvents-icon.png"></a></td>
+            <td><a href="https://pansci.asia/archives/118585" target="_blank"><img src="<?echo $img_path;?>icons/PanRead-icon.png"></a></td>
             </tr>
 
             <tr>
@@ -63,9 +63,9 @@ $img_path = VB_THEME_URI.'src/imgs/';
     <div class="col-lg-4 col-12 ps-lg-5 ps-3">
       <p class="text-white-lg">創客基地</p>
         <div class="mark-link row px-0">
-          <div class="col-lg-12 col-4" href="https://southmaker.wda.gov.tw/" type="button" target="_blank">南方創客基地</div>
-          <div class="col-lg-12 col-4" href="https://www.facebook.com/PunPlace/" type="button" target="_blank">胖地Punplace</div>
-          <div class="col-lg-12 col-4" href="https://tyc.tycg.gov.tw/關於基地/" type="button" target="_blank">桃園新創基地</div>
+          <div class="col-lg-12 col-4" href="https://southmaker.wda.gov.tw/" target="_blank">南方創客基地</div>
+          <div class="col-lg-12 col-4" href="https://www.facebook.com/PunPlace/" target="_blank">胖地Punplace</div>
+          <div class="col-lg-12 col-4" href="https://tyc.tycg.gov.tw/關於基地/" target="_blank">桃園新創基地</div>
         </div>
       </div>
 

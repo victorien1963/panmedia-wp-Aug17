@@ -154,7 +154,7 @@
 #indicators4{
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -10%;
     left: 0;
     z-index: 2;
     display: flex;
@@ -162,7 +162,7 @@
     padding: 0;
     margin-right: 15%;
     margin-left: 15%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     list-style: none;
     z-index: 30;
 }
@@ -199,7 +199,8 @@
     border: 0;
     z-index: 10;
     user-select: none;
-    margin: 5.5rem 10rem 5rem -3rem;
+    left: 0;
+    top: 35%;
 }
 
 .carousel-2 i:nth-child(2){
@@ -210,7 +211,8 @@
     border: 0;
     z-index: 10;
     user-select: none;
-    margin: 5.5rem 0rem 5rem 21.5rem;
+    right: 0;
+    top: 35%;
 }
 
 .carousel-2 > i:hover{
@@ -256,7 +258,8 @@
     border: 0;
     z-index: 10;
     user-select: none;
-    margin: 7rem 10rem 5rem -3rem;
+    left: 0%;
+    top: 40%;
 }
 
 .carousel-4 i:nth-child(2){
@@ -267,7 +270,8 @@
     border: 0;
     z-index: 10;
     user-select: none;
-    margin: 7rem 0rem 5rem 27rem;
+    right: 0%;
+    top: 40%;
 }
 
 .carousel-4 > i:hover{
@@ -278,38 +282,31 @@
 /* Carousel 5 */
 .carousel-5 i:nth-child(1){
     position: absolute;
-    color: #ffffff;
+    color: #fff;
     font-size: 3rem;
-    opacity: 0.5;
+    opacity: 0.6;
     border: 0;
     z-index: 10;
     user-select: none;
-    margin: 29rem 0rem 5rem 0rem;
+    left: 0%;
+    top: 60%;
 }
 
 .carousel-5 i:nth-child(2){
     position: absolute;
-    color: #969696;
+    color: #33b3b8;
     font-size: 3rem;
-    opacity: 0.5;
+    opacity: 0.6;
     border: 0;
     z-index: 10;
     user-select: none;
-    margin: 29rem 0rem 5rem 82rem;
+    right: 0%;
+    top: 60%;
 }
 
 .carousel-5 > i:hover{
-    color: #33b3b8;
+    color: #259ca0;
     opacity: 1;
-}
-
-
-/* Banner img */
-.img-brightness{
-    -webkit-filter: brightness(.8);
-    z-index: 2;
-    max-height: 790px;
-    overflow: hidden;
 }
 
 @media screen and (max-width: 767px){
@@ -337,11 +334,6 @@
         line-height: 1.5rem;
     }
 
-    /* Banner img */
-    .img-brightness{
-        -webkit-filter: brightness(.6);
-    }
-
     /* indicators */
     #indicators1 [data-bs-target] {
         width: 12px;
@@ -359,31 +351,36 @@
     }
 
     /* Carousel */
+    .carousel-2 i:nth-child(1){
+        top: 25%;
+    } 
+
     .carousel-2 i:nth-child(2){
-        margin-left: 17rem;
+        top: 25%;
     } 
 
     .carousel-4 i:nth-child(1){
         color: #15818c;        
         opacity: 0.5;
+        top: 30%;
     } 
 
     .carousel-4 i:nth-child(2){
-        color: #15818c;        
-        margin-left: 17rem;
+        color: #15818c;
         opacity: 0.5;
+        top: 30%;
     } 
 
     .carousel-5 i:nth-child(1){
-        color: #f5f5f5;
-        margin-top: 18rem;
-        margin-left: -2rem;
-        opacity: 0.8;
-    }
+        color: #15818c;        
+        opacity: 0.5;
+        top: 50%;
+    } 
 
     .carousel-5 i:nth-child(2){
-        margin-top: 18rem;
-        margin-left: 18rem;
-    }
+        color: #15818c;
+        opacity: 0.5;
+        top: 50%;
+    } 
 
 }
