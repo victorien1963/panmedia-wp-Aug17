@@ -14,72 +14,70 @@ if ( ! defined( 'ABSPATH' ) ) {
 $img_path = VB_THEME_URI.'src/imgs/';
 get_header(); ?>
 
-<!-- Banner輪播 -->
-<div id="BannerCarousel" class="carousel slide" data-bs-ride="carousel">
-	<div class="carousel-indicators" id="indicators1">
-		<button  data-bs-target="#BannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-		<button  data-bs-target="#BannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-		<button  data-bs-target="#BannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-		<button  data-bs-target="#BannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-		<button  data-bs-target="#BannerCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-	</div> 
+    <!-- Banner輪播 -->
+	<div id="BannerCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators" id="indicators1">
+              <button type="button" data-bs-target="#BannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#BannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#BannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#BannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#BannerCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div> 
 
-	<div class="carousel-inner">
-		<div class="carousel-item active" data-bs-interval="5000">
-		<div class="carousel-caption-adj d-md-block">
-			<h2>PanMedia泛科知識媒體集團致力於知識推廣</h2>
-			<p>從泛科學新媒體起家，創建知識賦能共同體，讓天下沒有難學的知識</p>
-		</div>
-		<img src="<?echo $img_path;?>banner/carousel-7.jpg" class="d-block w-100 img-brightness" alt="...">
-		</div>
+            <div class="carousel-inner">
+              <div class="carousel-item active img-brightness" data-bs-interval="5000">
+                <div class="carousel-caption-adj d-md-block">
+                  <h2>PanMedia泛科知識媒體集團致力於知識推廣</h2>
+                  <p>從泛科學新媒體起家，創建知識賦能共同體，讓天下沒有難學的知識</p>
+                </div>
+                <img src="<?echo $img_path;?>banner/carousel-7.jpg" class="d-block w-100 carousel-img-size" alt="...">
+              </div>
 
-		<div class="carousel-item" data-bs-interval="5000">
-		<div class="carousel-caption-adj d-md-block">
-			<h2>PanGOGO知識購是內容創作者的得力夥伴</h2>
-			<p>結合線上課程、內容訂閱、舉辦活動、贊助支持、線上商店功能的一站式知識變現平台</p>
-		</div>
-		<img src="<?echo $img_path;?>banner/carousel-3.jpg" class="d-block w-100 img-brightness" alt="...">
-		</div>
+              <div class="carousel-item img-brightness" data-bs-interval="5000">
+                <div class="carousel-caption-adj d-md-block">
+                  <h2>PanGOGO知識購是內容創作者的得力夥伴</h2>
+                  <p>結合線上課程、內容訂閱、舉辦活動、贊助支持、線上商店功能的一站式知識變現平台</p>
+                </div>
+                <img src="<?echo $img_path;?>banner/carousel-3.jpg" class="d-block w-100 carousel-img-size" alt="...">
+              </div>
 
-		<div class="carousel-item" data-bs-interval="5000">
-		<div class="carousel-caption-adj d-md-block">
-			<h2>以內容行銷建立企業深度影響力</h2>
-			<p>線上媒體企劃與線下品牌活動的策劃專家，以知識轉譯為基底，有效溝通消費者並深植人心</p>
-		</div>
-		<img src="<?echo $img_path;?>banner/carousel-6.jpg" class="d-block w-100 img-brightness" alt="...">
-		</div>
+              <div class="carousel-item img-brightness" data-bs-interval="5000">
+                <div class="carousel-caption-adj d-md-block">
+                  <h2>以內容行銷建立企業深度影響力</h2>
+                  <p>線上媒體企劃與線下品牌活動的策劃專家，以知識轉譯為基底，有效溝通消費者並深植人心</p>
+                </div>
+                <img src="<?echo $img_path;?>banner/carousel-6.JPG" class="d-block w-100 carousel-img-size" alt="...">
+              </div>
 
-		<div class="carousel-item" data-bs-interval="5000">
-		<div class="carousel-caption-adj d-md-block">
-			<h2>專精公共議題公關與教育推廣</h2>
-			<p>獲2018年經濟部新創事業金質獎，深度經營公共議題溝通，並創辦國中科普素養數位平台「科學生」</p>
-		</div>
-		<img src="<?echo $img_path;?>banner/carousel-9.jpg" class="d-block w-100 img-brightness" alt="...">
-		</div>
+              <div class="carousel-item img-brightness" data-bs-interval="5000">
+                <div class="carousel-caption-adj d-md-block">
+                  <h2>專精公共議題公關與教育推廣</h2>
+                  <p>獲2018年經濟部新創事業金質獎，深度經營公共議題溝通，並創辦國中科普素養數位平台「科學生」</p>
+                </div>
+                <img src="<?echo $img_path;?>banner/carousel-9.JPG" class="d-block w-100 carousel-img-size" alt="...">
+              </div>
 
-		<div class="carousel-item" data-bs-interval="5000">
-		<div class="carousel-caption-adj d-md-block">
-			<h2>深耕地方創新基地以傳承創業經驗</h2>
-			<p>串聯台南胖地創客基地、南方創客基地與桃園新創育成空間， 積極育成新創事業</p>
-		</div>
-		<img src="<?echo $img_path;?>banner/carousel-10.jpg" class="d-block w-100 img-brightness" alt="...">
-		</div>
-	</div>
+              <div class="carousel-item img-brightness" data-bs-interval="5000">
+                <div class="carousel-caption-adj d-md-block">
+                  <h2>深耕地方創新基地以傳承創業經驗</h2>
+                  <p>串聯台南胖地創客基地、南方創客基地與桃園新創育成空間， 積極育成新創事業</p>
+                </div>
+                <img src="<?echo $img_path;?>banner/carousel-10.JPG" class="d-block w-100 carousel-img-size" alt="...">
+              </div>
+            </div>
 
-	<button class="carousel-control-prev"  data-bs-target="#BannerCarousel" data-bs-slide="prev">
-		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		<span class="visually-hidden">Previous</span>
-	</button>
-	<button class="carousel-control-next"  data-bs-target="#BannerCarousel" data-bs-slide="next">
-		<span class="carousel-control-next-icon" aria-hidden="true"></span>
-		<span class="visually-hidden">Next</span>
-	</button>
-</div>
+            <div class="d-flex justify-content-between">
+              <div class="carousel-1">
+                  <i href="#" class="fas fa-angle-left" type="button" data-bs-target="#BannerCarousel" data-bs-slide="prev"></i>
+                  <i herf="#" class="fas fa-angle-right" type="button" data-bs-target="#BannerCarousel" data-bs-slide="next"></i>          
+              </div>
+            </div>
+    </div>
 
 <!-- 三大事業群 -->
 <div class="container my-lg-5 mt-5 pb-5">
 	<div class="row p-lg-5 col-lg-12">
-	<h2 class="pt-lg-5 pb-2 text-center text-lightblue-lg">PanMedia三大事業群</h2>
+	<h2 class="pb-2 text-center text-lightblue-lg">PanMedia三大事業群</h2>
 	<h4 class="text-grey-lg text-center pt-lg-2 pb-4">媒體界最完整知識生態系，擁有科普、影視、科技、美食到旅行的堅強垂直媒體陣容。</h4>
 	</div>
 
@@ -140,10 +138,10 @@ get_header(); ?>
 							<a class="box-title">泛科學</a>
 							<a class="box-title2">PanSci</a>
 							<ul class="icon">
-								<li><a href="https://pansci.asia/" target="_blank" class="fa fa-link" target="_blank"></a></li>
-								<li><a href="#" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
-								<li><a herf="#" target="_blank" class="fab fa-line" target="_blank"></a></li>
-							</ul>
+                                      <li><a href="https://pansci.asia/" target="_blank" class="fa fa-link" target="_blank"></a></li>
+                                      <li><a href="https://www.facebook.com/PanSci" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
+                                      <li><a herf="https://page.line.me/ghl8230y" target="_blank" class="fab fa-line" target="_blank"></a></li>
+                            </ul>
 							<div class="description">
 							PanSci 泛科學 為台灣最大的科學網站及知識社群。我們認為科學無處不在，卻常常在重要議題的討論當中缺席；因此我們致力提供科學、知識討論的最佳場合，並邀請科學研究者、教育者、愛好者、以及所有受科學影響的人們，共同暢談科學、理性思考議題中的科學面向。我們也認為科學應該面向大眾，要能解決大眾的問題，並且讓解決問題本身變成一種樂趣。
 							</div>
@@ -158,10 +156,9 @@ get_header(); ?>
 							<a class="box-title">泛科技</a>
 							<a class="box-title2">PanX</a>
 							<ul class="icon">
-							<li><a href="https://panx.asia/" class="fa fa-link" target="_blank"></a></li>
-							<li><a href="#" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
-							<li><a herf="#" target="_blank" class="fab fa-line" target="_blank"></a></li>
-							</ul>
+                                    <li><a href="https://panx.asia/" class="fa fa-link" target="_blank"></a></li>
+                                    <li><a href="https://www.facebook.com/panx.asia" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
+                            </ul>
 							<div class="description">
 							PanX 泛科技聚焦新能源、金融科技、生物科技、物聯網、大數據、工業4.0等主題，以數位科技發展、創新創業、產業應用、科技生活等不同角度，將科技對未來的影響做最深入、最完整的覆蓋。時常舉辦講座與主題會展，促進科技產業與趨勢關注者學習與溝通。
 							</div>
@@ -176,10 +173,9 @@ get_header(); ?>
 							<a class="box-title">娛樂重擊</a>
 							<a class="box-title2">Punchline</a>
 							<ul class="icon">
-							<li><a href="http://punchline.asia/" target="_blank" class="fa fa-link" target="_blank"></a></li>
-							<li><a href="#" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
-							<li><a herf="#" target="_blank" class="fab fa-line" target="_blank"></a></li>
-							</ul>
+                                    <li><a href="http://punchline.asia/" target="_blank" class="fa fa-link" target="_blank"></a></li>
+                                    <li><a href="https://www.facebook.com/Punchline.asia" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
+                            </ul>
 							<p class="description">
 							Punchline 娛樂重擊是台灣最大的垂直影視音產業媒體，提供最可靠、專業的觀點與訊息，致力於傳承與提升產業知識。我們看見全球的影視音娛樂產業正劇烈變動，而我們試圖利用新的方式來應對改變。誠摯邀請關注娛樂產業未來，對發展產業有高度熱誠的媒體人、科技人、創作者、產業人士加入我們！
 							</p>
@@ -194,10 +190,9 @@ get_header(); ?>
 						<a class="box-title">美食加</a>
 						<a class="box-title2">Taster</a>
 						<ul class="icon">
-							<li><a href="https://taster.life/" class="fa fa-link" target="_blank"></a></li>
-							<li><a href="#" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
-							<li><a herf="#" target="_blank" class="fab fa-line" target="_blank"></a></li>
-						</ul>
+                                  <li><a href="https://taster.life/" class="fa fa-link" target="_blank"></a></li>
+                                  <li><a href="https://www.facebook.com/tasterlovesfood" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
+                        </ul>
 						<div class="description">
 							美食是我們最重要的身分認同。即時頭條、流行趨勢、娛樂情報、消費指南、專家觀點，通通報給你知，當然，主題都是吃。「Taster 美食加」是 Liz 高琹雯 在 2018 年成立的美食垂直媒體，將擴大發揮她在「美食家的自學之路 Self-taught Gourmet」累積的經驗。「美食加」因此是美食家的延伸，希望用美食的加法把人與美好的事物串連起來。
 						</div>
@@ -212,10 +207,9 @@ get_header(); ?>
 						<a class="box-title">旅飯</a>
 						<a class="box-title2">Pantravel</a>
 						<ul class="icon">
-						<li><a href="http://pantravel.life/" target="_blank" class="fa fa-link"></a></li>
-						<li><a href="#" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
-						<li><a herf="#" target="_blank" class="fab fa-line" target="_blank"></a></li>
-						</ul>
+                                <li><a href="http://pantravel.life/" target="_blank" class="fa fa-link"></a></li>
+                                <li><a href="https://www.facebook.com/PanTravelTW" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
+                        </ul>
 						<p class="description">
 						Pantravel 旅飯，是專注台灣，發掘日本，旁及泛亞太區域等米食國家的新媒體。我們試圖創造令你耳目一新的旅遊體驗與思維，摸索出最適合台灣旅遊產業發展的藍圖。旅飯企圖在旅遊產業注入新血，不論面對群眾與面對產業都能佔有一席之地。
 						</p>
@@ -585,7 +579,7 @@ get_header(); ?>
 		<h2 class="text-lightblue-lg text-center pt-lg-5 pb-lg-3">聯絡我們</h2>
 		<h4 class="text-grey-lg text-left mt-2">若您對PanMedia泛科知識媒體集團服務感興趣，請填寫以下資訊，或撥打(02)2362-0699，將有專人與您聯繫。
 		</h4>
-		<h5 class="text-danger text-center">*為必填</h5>
+		<h5 class="text-danger text-left">*為必填</h5>
 	</div>
 
 	<div class="row px-lg-5 ps-3 w-100">

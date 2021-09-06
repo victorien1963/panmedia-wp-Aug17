@@ -190,13 +190,7 @@ body{
 }
 
 
-.img-brightness{
-    -webkit-filter: brightness(.8);
-    z-index: 2;
-    min-height: 790px;
-    max-height: 790px;
-    overflow: hidden;
-}
+
 
 .case-img-size{
     height: 360px;
@@ -368,10 +362,11 @@ body{
 
     .buz-scope > a > p:nth-child(3) {
         font-size: .5rem;
+        padding-bottom: .5rem;
     }
 
     .buz-scope > a > i {
-        padding-top: 1.5rem;
+        padding-top: 1rem;
     }
 
     /* 案例*/

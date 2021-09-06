@@ -18,6 +18,7 @@
     color:white;
     text-align: center;
     z-index: 3;
+    text-shadow: black 0.1em 0.1em 0.2em
 }
 
 .carousel-caption-adj > h2{
@@ -50,8 +51,8 @@
 #indicators1 [data-bs-target] {
     box-sizing: content-box;
     flex: 0 1 auto;
-    width: 14px;
-    height: 14px;
+    width: 10px;
+    height: 10px;
     margin-right: 3px;
     margin-left: 3px;
     text-indent: -999px;
@@ -62,7 +63,7 @@
     border-radius: 50%;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    opacity: .5;
+    opacity: .7;
     transition: opacity .6s ease;
 }
 
@@ -154,7 +155,7 @@
 #indicators4{
     position: absolute;
     right: 0;
-    bottom: -10%;
+    bottom: 0;
     left: 0;
     z-index: 2;
     display: flex;
@@ -162,7 +163,7 @@
     padding: 0;
     margin-right: 15%;
     margin-left: 15%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     list-style: none;
     z-index: 30;
 }
@@ -190,6 +191,36 @@
     opacity: .8;
 }
 
+/* Carousel 1 */
+.carousel-1 i:nth-child(1){
+    position: absolute;
+    color: #fff;
+    font-size: 3rem;
+    opacity: 0.3;
+    border: 0;
+    z-index: 99;
+    user-select: none;
+    bottom: 45%;
+    left: 0;
+}
+
+.carousel-1 i:nth-child(2){
+    position: absolute;
+    color: #fff;
+    font-size: 3rem;
+    opacity: 0.3;
+    border: 0;
+    z-index: 99;
+    user-select: none;
+    bottom: 45%; 
+    right: 0;
+}
+
+.carousel-1 > i:hover{
+    color: #33b3b8;
+    opacity: 1;
+}
+
 /* Carousel 2 */
 .carousel-2 i:nth-child(1){
     position: absolute;
@@ -199,8 +230,7 @@
     border: 0;
     z-index: 10;
     user-select: none;
-    left: 0;
-    top: 35%;
+    margin: 5.5rem 10rem 5rem -3rem;
 }
 
 .carousel-2 i:nth-child(2){
@@ -211,8 +241,7 @@
     border: 0;
     z-index: 10;
     user-select: none;
-    right: 0;
-    top: 35%;
+    margin: 5.5rem 0rem 5rem 21.5rem;
 }
 
 .carousel-2 > i:hover{
@@ -258,8 +287,7 @@
     border: 0;
     z-index: 10;
     user-select: none;
-    left: 0%;
-    top: 40%;
+    margin: 7rem 10rem 5rem -3rem;
 }
 
 .carousel-4 i:nth-child(2){
@@ -270,8 +298,7 @@
     border: 0;
     z-index: 10;
     user-select: none;
-    right: 0%;
-    top: 40%;
+    margin: 7rem 0rem 5rem 27rem;
 }
 
 .carousel-4 > i:hover{
@@ -282,31 +309,44 @@
 /* Carousel 5 */
 .carousel-5 i:nth-child(1){
     position: absolute;
-    color: #fff;
+    color: #ffffff;
     font-size: 3rem;
-    opacity: 0.6;
+    opacity: 0.5;
     border: 0;
     z-index: 10;
     user-select: none;
-    left: 0%;
-    top: 60%;
+    margin: 29rem 0rem 5rem 0rem;
 }
 
 .carousel-5 i:nth-child(2){
     position: absolute;
-    color: #33b3b8;
+    color: #969696;
     font-size: 3rem;
-    opacity: 0.6;
+    opacity: 0.5;
     border: 0;
     z-index: 10;
     user-select: none;
-    right: 0%;
-    top: 60%;
+    margin: 29rem 0rem 5rem 82rem;
 }
 
 .carousel-5 > i:hover{
-    color: #259ca0;
+    color: #33b3b8;
     opacity: 1;
+}
+
+
+/* Banner img */
+.img-brightness{
+    z-index: 2;
+    min-height: 520px;
+    max-height: 520px;
+}
+
+.carousel-img-size{
+    -webkit-filter: brightness(.7);
+    width: 100%;
+    min-height: 520px;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 767px){
@@ -334,6 +374,18 @@
         line-height: 1.5rem;
     }
 
+    /* Banner img */
+    .img-brightness{
+        min-height: 250px;
+        max-height: 250px;
+    }
+
+    .carousel-img-size{
+        width: 100%;
+        min-height: 250px;
+        overflow: hidden;
+    }
+
     /* indicators */
     #indicators1 [data-bs-target] {
         width: 12px;
@@ -350,37 +402,41 @@
         margin-bottom: 4rem;
     }
 
-    /* Carousel */
-    .carousel-2 i:nth-child(1){
-        top: 25%;
-    } 
+    /* Carousel 1 */
+    .carousel-1 i:nth-child(1){
+        bottom: 40%;
+    }
 
+    .carousel-1 i:nth-child(2){
+        bottom: 40%; 
+    }
+
+    /* Carousel 2 */
     .carousel-2 i:nth-child(2){
-        top: 25%;
+        margin-left: 17rem;
     } 
 
     .carousel-4 i:nth-child(1){
         color: #15818c;        
         opacity: 0.5;
-        top: 30%;
     } 
 
     .carousel-4 i:nth-child(2){
-        color: #15818c;
+        color: #15818c;        
+        margin-left: 17rem;
         opacity: 0.5;
-        top: 30%;
     } 
 
     .carousel-5 i:nth-child(1){
-        color: #15818c;        
-        opacity: 0.5;
-        top: 50%;
-    } 
+        color: #f5f5f5;
+        margin-top: 18rem;
+        margin-left: -2rem;
+        opacity: 0.8;
+    }
 
     .carousel-5 i:nth-child(2){
-        color: #15818c;
-        opacity: 0.5;
-        top: 50%;
-    } 
+        margin-top: 18rem;
+        margin-left: 18rem;
+    }
 
 }
