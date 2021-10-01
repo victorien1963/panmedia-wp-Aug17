@@ -77,8 +77,12 @@ get_header(); ?>
 <!-- 三大事業群 -->
 <div class="container my-lg-5 mt-5 pb-5">
 	<div class="row p-lg-5 col-lg-12">
-	<h2 class="pb-2 text-center text-lightblue-lg">PanMedia三大事業群</h2>
-	<h4 class="text-grey-lg text-center pt-lg-2 pb-4">媒體界最完整知識生態系，擁有科普、影視、科技、美食到旅行的堅強垂直媒體陣容。</h4>
+	<h2 class="pb-2 text-center text-lightblue-lg">
+		<?php echo get_field('home-div-title-1','option'); ?>
+	</h2>
+	<h4 class="text-grey-lg text-center pt-lg-2 pb-4">
+		<?php echo get_field('home-div-content-1','option'); ?>
+	</h4>
 	</div>
 
 	<div class="row px-lg-5 p-3">
@@ -115,8 +119,12 @@ get_header(); ?>
 <!-- 五大媒體 -->
 <div class="container my-lg-5 pb-lg-5" id="anchor-media">
 	<div class="row p-lg-5 p-2">
-		<h2 class="pt-5 pb-2 text-lightblue-lg">五大媒體</h2>
-		<h4 class="text-grey-lg text-left pt-2 pb-lg-4">媒體界最完整知識生態系，擁有科普、影視、科技、美食到旅行的堅強垂直媒體陣容。</h4>
+		<h2 class="pt-5 pb-2 text-lightblue-lg">
+			<?php echo get_field('home-div-title-2','option'); ?>
+		</h2>
+		<h4 class="text-grey-lg text-left pt-2 pb-lg-4">
+			<?php echo get_field('home-div-content-2','option'); ?>
+		</h4>
 	</div>        
 	<div id="carouselExampleIndicators" class="carousel slide row" data-bs-ride="carousel">
 			<div class="pt-lg-3 ms-lg-5 col-lg-4 col-12"> 
@@ -237,8 +245,12 @@ get_header(); ?>
 <!-- 電商事業 -->
 <div class="container" id="anchor-shop">
 	<div class="row pt-lg-5">
-	<h2 class="pt-5 pb-3 text-center text-lightblue-lg">電商事業</h2>
-	<h4 class="text-grey-lg text-center mt-2 pb-lg-3 pt-lg-1 pb-5">知識是我們共同的血液，PanGOGO知識購服務內容創作者，同時經營科學選物商店泛科市集。</h4>
+	<h2 class="pt-5 pb-3 text-center text-lightblue-lg">
+		<?php echo get_field('home-div-title-3','option'); ?>
+	</h2>
+	<h4 class="text-grey-lg text-center mt-2 pb-lg-3 pt-lg-1 pb-5">
+		<?php echo get_field('home-div-content-3','option'); ?>
+	</h4>
 </div>
 <div class="row">       
 	<div class="offset-lg-6 col-lg-6 col-12">
@@ -576,8 +588,11 @@ get_header(); ?>
 <!-- 聯絡我們 -->    
 <div class="container pb-lg-5">
 	<div class="row p-lg-5 px-3 pt-5">
-		<h2 class="text-lightblue-lg text-center pt-lg-5 pb-lg-3">聯絡我們</h2>
-		<h4 class="text-grey-lg text-left mt-2">若您對PanMedia泛科知識媒體集團服務感興趣，請填寫以下資訊，或撥打(02)2362-0699，將有專人與您聯繫。
+		<h2 class="text-lightblue-lg text-center pt-lg-5 pb-lg-3">
+			<?php echo get_field('home-div-title-6','option'); ?>
+		</h2>
+		<h4 class="text-grey-lg text-left mt-2">
+			<?php echo get_field('home-div-content-6','option'); ?>
 		</h4>
 		<h5 class="text-danger text-left">*為必填</h5>
 	</div>

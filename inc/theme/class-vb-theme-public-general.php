@@ -44,8 +44,45 @@ if ( ! class_exists( 'VB_Theme_Public_General' ) ) {
                     'capability'	=> 'manage_options',
                     'redirect'		=> false
                 ));
-            }
-        }
+
+            // 首頁設定
+                acf_add_options_page(array(
+                    'page_title' 	=> '首頁設定',
+                    'menu_slug' 	=> 'home-theme-settings',
+                    'capability'	=> 'manage_options',
+                    'redirect'		=> true
+                ));
+
+            // Banner輪播
+                acf_add_options_page(array(
+                    'page_title' 	=> 'Banner輪播',
+                    'menu_title'	=> 'Banner輪播',
+                    'menu_slug' 	=> 'Top-banner-settings',
+                    'parent_slug'   => 'home-theme-settings',
+                    'capability'	=> 'manage_options',
+                    'redirect'		=> false
+                ));
+
+            // 區塊標題與內容
+            acf_add_options_page(array(
+                'page_title' 	=> '區塊標題與內容',
+                'menu_title'	=> '區塊標題與內容',
+                'menu_slug' 	=> 'home-div-title',
+                'parent_slug'   => 'home-theme-settings',
+                'capability'	=> 'manage_options',
+                'redirect'		=> false
+                ));
+
+            // 案例分享
+                acf_add_options_page(array(
+                'page_title' 	=> '案例分享',
+                'menu_title'	=> '案例分享',
+                'menu_slug' 	=> 'home-case-slides',
+                'parent_slug'   => 'home-theme-settings',
+                'capability'	=> 'manage_options',
+                'redirect'		=> false
+                ));
+        }}
 
         public function public_enqueue_scripts() 
         {

@@ -345,15 +345,15 @@
 
 /* Banner img */
 .img-brightness{
-    z-index: 2;
-    min-height: 520px;
-    max-height: 520px;
+        z-index: 2;
+        min-height: auto;
+        max-height: 65vh;
 }
 
 .carousel-img-size{
     -webkit-filter: brightness(.7);
     width: 100%;
-    min-height: 520px;
+    // min-height: 520px;
     overflow: hidden;
 }
 
@@ -384,13 +384,14 @@
 
     /* Banner img */
     .img-brightness{
-        min-height: 250px;
-        max-height: 250px;
+        z-index: 2;
+        min-height: auto;
+        max-height: 65vh;
     }
 
     .carousel-img-size{
         width: 100%;
-        min-height: 250px;
+        // min-height: 250px;
         overflow: hidden;
     }
 
