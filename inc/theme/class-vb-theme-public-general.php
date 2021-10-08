@@ -54,6 +54,16 @@ if ( ! class_exists( 'VB_Theme_Public_General' ) ) {
                 ));
 
             // Banner輪播
+            acf_add_options_page(array(
+                'page_title' 	=> '網站Logo',
+                'menu_title'	=> '網站Logo',
+                'menu_slug' 	=> 'Top-logo-settings',
+                'parent_slug'   => 'home-theme-settings',
+                'capability'	=> 'manage_options',
+                'redirect'		=> false
+            ));
+
+            // Banner輪播
                 acf_add_options_page(array(
                     'page_title' 	=> 'Banner輪播',
                     'menu_title'	=> 'Banner輪播',

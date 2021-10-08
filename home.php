@@ -15,56 +15,48 @@ $img_path = VB_THEME_URI.'src/imgs/';
 get_header(); ?>
 
     <!-- Banner輪播 -->
-	<div id="BannerCarousel" class="carousel slide" data-bs-ride="carousel">
+		<div id="BannerCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators" id="indicators1">
-              <button type="button" data-bs-target="#BannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#BannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#BannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#BannerCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-              <button type="button" data-bs-target="#BannerCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            </div> 
+				<?php 
+					$slides = get_field('slides','option');
+					$count = count($slides);
+					for ($i = 0; $i < $count; $i++){
+						$active = '';	
+						if ($i === 0) {
+							$active = 'active';
+						}
+						?>
+						<button data-bs-target="#BannerCarousel" class="<?php echo $active?>" data-bs-slide-to="<?php echo $i;?>" aria-label="Slide <?php echo $i+1;?>"></button>
+						<?php
+					}					
+					?>
+            </div>
 
             <div class="carousel-inner">
-              <div class="carousel-item active img-brightness" data-bs-interval="5000">
-                <div class="carousel-caption-adj d-md-block">
-                  <h2>PanMedia泛科知識媒體集團致力於知識推廣</h2>
-                  <p>從泛科學新媒體起家，創建知識賦能共同體，讓天下沒有難學的知識</p>
-                </div>
-                <img src="<?echo $img_path;?>banner/carousel-7.jpg" class="d-block w-100 carousel-img-size" alt="...">
-              </div>
+				<?php
+				$i = 0;
+					foreach($slides as $slide){
+						$active = '';
+						if($i === 0) {
+							$active = 'active';
+						}
+						$title = $slide['title'];
+						$excerpt = $slide['excerpt'];
+						$thumbnail = $slide['thumbnail']['url'];
+				?>
 
-              <div class="carousel-item img-brightness" data-bs-interval="5000">
-                <div class="carousel-caption-adj d-md-block">
-                  <h2>PanGOGO知識購是內容創作者的得力夥伴</h2>
-                  <p>結合線上課程、內容訂閱、舉辦活動、贊助支持、線上商店功能的一站式知識變現平台</p>
-                </div>
-                <img src="<?echo $img_path;?>banner/carousel-3.jpg" class="d-block w-100 carousel-img-size" alt="...">
-              </div>
-
-              <div class="carousel-item img-brightness" data-bs-interval="5000">
-                <div class="carousel-caption-adj d-md-block">
-                  <h2>以內容行銷建立企業深度影響力</h2>
-                  <p>線上媒體企劃與線下品牌活動的策劃專家，以知識轉譯為基底，有效溝通消費者並深植人心</p>
-                </div>
-                <img src="<?echo $img_path;?>banner/carousel-6.JPG" class="d-block w-100 carousel-img-size" alt="...">
-              </div>
-
-              <div class="carousel-item img-brightness" data-bs-interval="5000">
-                <div class="carousel-caption-adj d-md-block">
-                  <h2>專精公共議題公關與教育推廣</h2>
-                  <p>獲2018年經濟部新創事業金質獎，深度經營公共議題溝通，並創辦國中科普素養數位平台「科學生」</p>
-                </div>
-                <img src="<?echo $img_path;?>banner/carousel-9.JPG" class="d-block w-100 carousel-img-size" alt="...">
-              </div>
-
-              <div class="carousel-item img-brightness" data-bs-interval="5000">
-                <div class="carousel-caption-adj d-md-block">
-                  <h2>深耕地方創新基地以傳承創業經驗</h2>
-                  <p>串聯台南胖地創客基地、南方創客基地與桃園新創育成空間， 積極育成新創事業</p>
-                </div>
-                <img src="<?echo $img_path;?>banner/carousel-10.JPG" class="d-block w-100 carousel-img-size" alt="...">
-              </div>
-            </div>
+				<div class="carousel-item <?php echo $active;?> img-brightness" data-bs-interval="5000">
+					<div class="carousel-caption-adj d-md-block">
+						<h2><?php echo $title;?></h2>
+						<p><?php echo $excerpt;?></p>
+					</div>
+					<img src="<?php echo $thumbnail;?>" class="d-block w-100 carousel-img-size" alt="...">
+				</div>
+				<?php
+				$i++;
+			}
+			?>
+            </div> 
 
             <div class="d-flex justify-content-between">
               <div class="carousel-1">
@@ -73,6 +65,24 @@ get_header(); ?>
               </div>
             </div>
     </div>
+
+
+<!-- echo test -->
+	<?php
+		$slides = get_field('slides','option');
+		// echo '<pre>'
+		// print_r($slides);
+		// echo '</pre>';
+		echo '<url>';
+		foreach($slides as $slide) {
+			echo '<li><ul>';
+			echo '<li>'.$slide['title'].'</li>';
+			echo '<li>'.$slide['excerpt'].'</li>';
+			echo '<li>'.$slide['thumbnail']['url'].'</li>';
+			echo '</ul></li>';
+		}
+		echo'</ul>';
+	?>
 
 <!-- 三大事業群 -->
 <div class="container my-lg-5 mt-5 pb-5">
@@ -168,7 +178,7 @@ get_header(); ?>
                                     <li><a href="https://www.facebook.com/panx.asia" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
                             </ul>
 							<div class="description">
-							PanX 泛科技聚焦新能源、金融科技、生物科技、物聯網、大數據、工業4.0等主題，以數位科技發展、創新創業、產業應用、科技生活等不同角度，將科技對未來的影響做最深入、最完整的覆蓋。時常舉辦講座與主題會展，促進科技產業與趨勢關注者學習與溝通。
+								PanX 泛科技聚焦新能源、金融科技、生物科技、物聯網、大數據、工業4.0等主題，以數位科技發展、創新創業、產業應用、科技生活等不同角度，將科技對未來的影響做最深入、最完整的覆蓋。時常舉辦講座與主題會展，促進科技產業與趨勢關注者學習與溝通。
 							</div>
 						</div>
 					</div>
@@ -514,13 +524,23 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
+			<div class="carousel-5">
+				<i href="#" class="fas fa-angle-left"  data-bs-target="#carouselExampleIndicators4" data-bs-slide="prev"></i>
+				<i herf="#" class="fas fa-angle-right"  data-bs-target="#carouselExampleIndicators4" data-bs-slide="next"></i>          
+			</div>
+			<div class="carousel-indicators" id="indicators4">
+					<button  data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1" class="active"></button>
+					<button  data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button  data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+	</div>
+</div>
 
-
-			  <!-- 我們的客戶／品牌牆 -->					
-				<div class="carousel-item" data-bs-interval="4000">
-					<div class="row col-lg-12 py-lg-5">
-						<h2 class="text-lightblue-lg text-center pt-4 pb-2">我們的客戶</h2>
-					</div>
+<!-- 我們的客戶／品牌牆 -->					
+	<div class="container">
+		<div class="row col-lg-12 py-lg-5">
+			<h2 class="text-lightblue-lg text-center pt-4 pb-2">我們的客戶</h2>
+				</div>
 
 					<table class="table brand-table-size">
 							<tbody>
@@ -568,18 +588,6 @@ get_header(); ?>
 						</table>
 				</div>
 			</div>
-			<div class="carousel-5">
-				<i href="#" class="fas fa-angle-left"  data-bs-target="#carouselExampleIndicators4" data-bs-slide="prev"></i>
-				<i herf="#" class="fas fa-angle-right"  data-bs-target="#carouselExampleIndicators4" data-bs-slide="next"></i>          
-			</div>
-			<div class="carousel-indicators" id="indicators4">
-					<button  data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1" class="active"></button>
-					<button  data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1" aria-label="Slide 2"></button>
-					<button  data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="2" aria-label="Slide 3"></button>
-					<button  data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="3" aria-label="Slide 4"></button>
-			</div>
-	</div>
-</div>
 
 <img src="<?echo $img_path;?>bg/contact-1.svg" class="bg-img8">
 <img src="<?echo $img_path;?>bg/blue-bg-5.svg" class="bg-img9">

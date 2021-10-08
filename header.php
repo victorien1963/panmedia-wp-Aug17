@@ -22,5 +22,6 @@
 			do_action( 'wp_body_open' );
 		}
 		?>
-		<img src="<?php echo VB_THEME_URI; ?>src/imgs/logo/logo-top-white.png" class="logo-top">
+		<img src="<?php echo get_field('top-logo','option'); ?>" class="logo-top">
+		
 
