@@ -92,6 +92,26 @@ if ( ! class_exists( 'VB_Theme_Public_General' ) ) {
                 'capability'	=> 'manage_options',
                 'redirect'		=> false
                 ));
+
+            // 回傳表單
+            acf_add_options_page(array(
+                'page_title' 	=> '表單',
+                'menu_title'	=> '表單',
+                'menu_slug' 	=> 'home-forms',
+                'parent_slug'   => 'home-theme-settings',
+                'capability'	=> 'manage_options',
+                'redirect'		=> false
+                ));
+
+            // 頁尾Footer
+                acf_add_options_page(array(
+                'page_title' 	=> '頁尾資訊',
+                'menu_title'	=> '頁尾資訊',
+                'menu_slug' 	=> 'home-footer',
+                'parent_slug'   => 'home-theme-settings',
+                'capability'	=> 'manage_options',
+                'redirect'		=> false
+                ));
         }}
 
         public function public_enqueue_scripts() 

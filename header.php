@@ -22,6 +22,6 @@
 			do_action( 'wp_body_open' );
 		}
 		?>
-		<img src="<?php echo get_field('top-logo','option'); ?>" class="logo-top">
+		<img src="<?php echo get_field('top-index-logo','option'); ?>" class="logo-top">
 		
 

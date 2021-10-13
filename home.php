@@ -68,7 +68,7 @@ get_header(); ?>
 
 
 <!-- echo test -->
-	<?php
+ 	<!--?php
 		$slides = get_field('slides','option');
 		// echo '<pre>'
 		// print_r($slides);
@@ -82,7 +82,7 @@ get_header(); ?>
 			echo '</ul></li>';
 		}
 		echo'</ul>';
-	?>
+	?> -->
 
 <!-- 三大事業群 -->
 <div class="container my-lg-5 mt-5 pb-5">
@@ -265,15 +265,15 @@ get_header(); ?>
 <div class="row">       
 	<div class="offset-lg-6 col-lg-6 col-12">
 			<div class="box" id="box2">
-				<img src="<?echo $img_path;?>logo/shop-logo-3.png" alt="">
+				<img src="<?php echo get_field('brand1-img','option'); ?>" alt="">
 				<div class="box-content">
-					<a class="box-title">知識購</a>
-					<a class="box-title2">PanGoGo</a>
+					<a class="box-title"><?php echo get_field('brand1-chi','option'); ?></a>
+					<a class="box-title2"><?php echo get_field('brand1-eng','option'); ?></a>
 					<ul class="icon">
-					<li><a href="https://pangogo.com/" class="fa fa-link" target="_blank"></a></li>
+					<li><a href="<?php echo get_field('brand1-link','option'); ?>" class="fa fa-link" target="_blank"></a></li>
 					</ul>
 					<p class="description2">
-					PanGOGO 知識購是一個專為知識變現者誕生的解決方案，讓你用最輕鬆、最能掌控個人品牌的方式，放心打造只屬於你的全功能站點。你可以立即向粉絲販售線上課程、電商購物、創作訂閱方案、活動票券，或讓他們透過贊助表示支持。你將擁有完整的資料跟分析權限，同時跟使用其他平台一樣不費力氣。
+						<?php echo get_field('brand1-content','option'); ?>
 					</p>
 				</div>
 			</div>
@@ -283,16 +283,16 @@ get_header(); ?>
 	<div class="row mb-5">       
 		<div class="offset-lg-6 col-lg-6 col-12">
 			<div class="box" id="box2">
-				<img src="<?echo $img_path;?>logo/shop-logo-2.png" alt="">
+				<img src="<?php echo get_field('brand2-img','option'); ?>" alt="">
 				<div class="box-content">
-					<a class="box-title">泛科市集</a>
-					<a class="box-title2">PanMarket</a>
+					<a class="box-title"><?php echo get_field('brand2-chi','option'); ?></a>
+					<a class="box-title2"><?php echo get_field('brand2-eng','option'); ?></a>
 					<ul class="icon">
-					<li><a href="https://panmarket.asia/" class="fa fa-link" target="_blank"></a></li>
-					<li><a href="https://www.facebook.com/panmarket.asia/" class="fab fa-facebook-f" target="_blank"></a></li>
+					<li><a href="<?php echo get_field('brand2-link','option'); ?>" class="fa fa-link" target="_blank"></a></li>
+					<li><a href="<?php echo get_field('brand2-link-fb','option'); ?>" class="fab fa-facebook-f" target="_blank"></a></li>
 					</ul>
 					<p class="description2">
-					泛科市集為集團旗下的電子商務平台，我們精選優質商品，訴求以運用科學知識，同時具創意、設計感、趣味性等元素為主，我們也鼓勵創客（maker）實作與手作產品。泛科市集以「生活化」為核心精神，藉由介紹與銷售選物，傳達科普知識與體驗，將科普推廣融入生活中。
+						<?php echo get_field('brand2-content','option'); ?>
 					</p>
 				</div>
 			</div>
@@ -602,39 +602,39 @@ get_header(); ?>
 		<h4 class="text-grey-lg text-left mt-2">
 			<?php echo get_field('home-div-content-6','option'); ?>
 		</h4>
-		<h5 class="text-danger text-left">*為必填</h5>
+	<!--<h5 class="text-danger text-left">*為必填</h5> -->
 	</div>
 
 	<div class="row px-lg-5 ps-3 w-100">
 		<div class="col-lg-6 col-12">
 		<div class="input-group mb-3">
-			<span class="input-group-text" id="basic-addon0">*姓&emsp;&emsp;名</span>
-			<input type="text" class="form-control" placeholder="愛因斯坦" aria-label="Name" aria-describedby="basic-addon0">
+			<span class="input-group-text" id="basic-addon0"><?php echo get_field('forms-q1','option'); ?></span>
+			<input type="text" class="form-control" placeholder="<?php echo get_field('forms-a1','option'); ?>" aria-label="Name" aria-describedby="basic-addon0">
 		</div>
 
 		<div class="input-group mb-3">
-			<span class="input-group-text" id="basic-addon1">*職&emsp;&emsp;稱</span>
-			<input type="text" class="form-control" placeholder="科學家" aria-label="Job" aria-describedby="basic-addon1">
+			<span class="input-group-text" id="basic-addon1"><?php echo get_field('forms-q2','option'); ?></span>
+			<input type="text" class="form-control" placeholder="<?php echo get_field('forms-a2','option'); ?>" aria-label="Job" aria-describedby="basic-addon1">
 		</div>
 
 		<div class="input-group mb-3">
-			<span class="input-group-text" id="basic-addon2">*公司名稱</span>
-			<input type="text" class="form-control" placeholder="公司名稱" aria-label="CompanyName" aria-describedby="basic-addon2">
+			<span class="input-group-text" id="basic-addon2"><?php echo get_field('forms-q3','option'); ?></span>
+			<input type="text" class="form-control" placeholder="<?php echo get_field('forms-a3','option'); ?>" aria-label="CompanyName" aria-describedby="basic-addon2">
 		</div>
 		
 		<div class="input-group mb-3">
-			<span class="input-group-text" id="basic-addon3">*電子郵件</span>
-			<input type="text" class="form-control" placeholder="ex. acc0101@mail.com" aria-label="eMail" aria-describedby="basic-addon3">
+			<span class="input-group-text" id="basic-addon3"><?php echo get_field('forms-q4','option'); ?></span>
+			<input type="text" class="form-control" placeholder="<?php echo get_field('forms-a4','option'); ?>" aria-label="eMail" aria-describedby="basic-addon3">
 		</div>
 
 		<div class="input-group mb-3">
-			<span class="input-group-text" id="basic-addon4">*聯絡電話</span>
-			<input type="text" class="form-control" placeholder="ex. 0900-000-000" aria-label="PhoneNumber" aria-describedby="basic-addon4">
+			<span class="input-group-text" id="basic-addon4"><?php echo get_field('forms-q5','option'); ?></span>
+			<input type="text" class="form-control" placeholder="<?php echo get_field('forms-a5','option'); ?>" aria-label="PhoneNumber" aria-describedby="basic-addon4">
 		</div>
 
 		<div class="input-group">
-			<span class="input-group-text">*所需服務</span>
-			<textarea class="form-control" placeholder="請簡述您需要的服務內容" aria-label="TextContent"></textarea>
+			<span class="input-group-text"><?php echo get_field('forms-q6','option'); ?></span>
+			<textarea class="form-control" placeholder="<?php echo get_field('forms-a6','option'); ?>" aria-label="TextContent"></textarea>
 		</div>
 		</div>
 	</div>

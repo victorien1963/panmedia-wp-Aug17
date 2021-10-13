@@ -51,33 +51,33 @@ $img_path = VB_THEME_URI.'src/imgs/';
 
     <!--社群頻道-->
     <div class="col-lg-4 col-12 ps-lg-5 ps-3">
-      <p class="text-white-lg">社群頻道</p>
+      <p class="text-white-lg"><?php echo get_field('Footer2-title','option'); ?></p>
       <div class="socialmedia-icons">
-        <a href="https://www.youtube.com/channel/UCuHHKbwC0TWjeqxbqdO-N_g" class="fab fa-youtube" target="_blank"></a>
-        <a href="https://www.instagram.com/pansci/" class="fab fa-instagram" target="_blank"></a>
-        <a href="https://page.line.me/ghl8230y" class="fab fa-line" target="_blank"></a>
-        <a href="https://podcasts.apple.com/tw/podcast/%E6%B3%9B%E6%B3%9B%E6%B3%9B%E7%A7%91%E5%AD%B8/id1516967929" class="fas fa-podcast" target="_blank"></a>
-        <a href="https://open.spotify.com/show/1jNRWWTtefR5em0DkD5qMG" class="fab fa-spotify" target="_blank"></a>
+        <a href="<?php echo get_field('Footer2-link-fb','option'); ?>" class="fab fa-youtube" target="_blank"></a>
+        <a href="<?php echo get_field('Footer2-link-ig','option'); ?>" class="fab fa-instagram" target="_blank"></a>
+        <a href="<?php echo get_field('Footer2-link-line','option'); ?>" class="fab fa-line" target="_blank"></a>
+        <a href="<?php echo get_field('Footer2-link-podcast','option'); ?>" class="fas fa-podcast" target="_blank"></a>
+        <a href="<?php echo get_field('Footer2-link-spotify','option'); ?>" class="fab fa-spotify" target="_blank"></a>
       </div>
     </div>
 
     <!--創客基地-->
     <div class="col-lg-4 col-12 ps-lg-5 ps-3">
-      <p class="text-white-lg">創客基地</p>
+      <p class="text-white-lg"><?php echo get_field('Footer3-title','option'); ?></p>
         <div class="mark-link text-white row px-0">
-          <div class="col-lg-12 col-4" href="https://southmaker.wda.gov.tw/" type="button" target="_blank">南方創客基地</div>
-          <div class="col-lg-12 col-4" href="https://www.facebook.com/PunPlace/" type="button" target="_blank">胖地Punplace</div>
-          <div class="col-lg-12 col-4" href="https://tyc.tycg.gov.tw/關於基地/" type="button" target="_blank">桃園新創基地</div>
+          <div class="col-lg-12 col-4" href="<?php echo get_field('Footer3-title_link1_url','option'); ?>" type="button" target="_blank"><?php echo get_field('Footer3-title_link1','option'); ?></div>
+          <div class="col-lg-12 col-4" href="<?php echo get_field('Footer3-title_link2_url','option'); ?>" type="button" target="_blank"><?php echo get_field('Footer3-title_link2','option'); ?></div>
+          <div class="col-lg-12 col-4" href="<?php echo get_field('Footer3-title_link3_url','option'); ?>" type="button" target="_blank"><?php echo get_field('Footer3-title_link3','option'); ?></div>
         </div>
       </div>
 
     <!--加入我們-->
     <div class="col-lg-4 col-12 join-us ps-lg-5 ps-3">
-      <a href="https://www.104.com.tw/company/1a2x6bjflf" class="fas fa-hand-point-right text-white-lg mt-2" target="_blank"> 加入我們</a>
+      <a href="<?php echo get_field('Footer4-link','option'); ?>" class="fas fa-hand-point-right text-white-lg mt-2" target="_blank"> <?php echo get_field('Footer4-title','option'); ?></a>
       <p class="text-white">
-        business@pansci.asia<br/>
-        (02)2362-0699<br/>
-        10081 台北市中正區同安街 71 號 3 樓
+        <?php echo get_field('contact_mail','option'); ?><br/>
+        <?php echo get_field('contact_numbers','option'); ?><br/>
+        <?php echo get_field('contact_add','option'); ?>
       </p>
     </div>            
   </div>

@@ -17,9 +17,9 @@ body{
 /* index logo*/
 .logo-top{
     position: absolute;
-    z-index: 1;
+    z-index: 50;
     width: 300px;
-    padding: 2rem;
+    padding: 1rem 1rem;
 }
 
 .banner-anchor{
@@ -285,7 +285,7 @@ body{
     /* index logo */
     .logo-top{
         width: 200px;
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
     }
 
     /* All background */
