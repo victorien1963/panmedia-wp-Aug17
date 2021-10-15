@@ -640,7 +640,7 @@ get_header(); ?>
 	</div>
 	
 	<div class="row my-4 px-5">
-		<div href="" class="offset-lg-2 col-lg-2 btn-lightblue">送出</div>
+		<div href="" class="offset-lg-2 col-lg-2 btn-lightblue"><?php echo get_field('forms-btn','option'); ?></div>
 	</div>
 
 </div>
