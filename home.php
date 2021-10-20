@@ -99,24 +99,24 @@ get_header(); ?>
 		<div class="col-lg-4 col-4 buz-scope" id="bs-1">
 		<a href="#anchor-media">
 			<i class="fas fa-bullhorn fs-1"></i>
-			<p>媒體事業群</p>
-			<p>Media</p>
+			<p><?php echo get_field('div-title-chi-1','option'); ?></p>
+			<p><?php echo get_field('div-title-eng-1','option'); ?></p>
 		</a>
 		</div>
 
 	<div class="col-lg-4 col-4 buz-scope" id="bs-2">
 		<a href="#anchor-shop">
 			<i class="fas fa-shopping-cart fs-1"></i>
-			<p>電商事業群</p>
-			<p>Online shop</p>
+			<p><?php echo get_field('div-title-chi-2','option'); ?></p>
+			<p><?php echo get_field('div-title-eng-2','option'); ?></p>
 		</a>
 	</div>
 
 	<div class="col-lg-4 col-4 buz-scope" id="bs-3">
 		<a href="#anchor-edu">
 			<i class="fas fa-book-open fs-1"></i>
-			<p>教育事業群</p>
-			<p>Education</p>
+			<p><?php echo get_field('div-title-chi-3','option'); ?></p>
+			<p><?php echo get_field('div-title-eng-3','option'); ?></p>
 		</a>
 		</div>
 	</div>
@@ -135,117 +135,77 @@ get_header(); ?>
 		<h4 class="text-grey-lg text-left pt-2 pb-lg-4">
 			<?php echo get_field('home-div-content-2','option'); ?>
 		</h4>
-	</div>        
+	</div>
+
+<!-- Branding Slides 1 -->
 	<div id="carouselExampleIndicators" class="carousel slide row" data-bs-ride="carousel">
 			<div class="pt-lg-3 ms-lg-5 col-lg-4 col-12"> 
+				<div class="carousel-indicators" id="indicators2">
+				<?php 
+						$slides_brand_1 = get_field('slides_brand_1','option');
+						$count = count($slides_brand_1);
+						for ($i = 0; $i < $count; $i++){
+							$active = '';	
+							if ($i === 0) {
+								$active = 'active';
+							}
+							?>
+							<button data-bs-target="#BannerCarousel" class="<?php echo $active?>" data-bs-slide-to="<?php echo $i;?>" aria-label="Slide <?php echo $i+1;?>"></button>
+							<?php
+						}					
+						?>
+				</div>
 
-			<div class="carousel-indicators" id="indicators2">
-				<button  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-				<button  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-				<button  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-				<button  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-			</div>
+				<div class="carousel-inner py-lg-3 px-5">
 
-			<div class="carousel-inner py-lg-3 px-5">
+				<?php
+					$i = 0;
+						foreach($slides_brand_1 as $slide2){
+							$active = '';
+							if($i === 0) {
+								$active = 'active';
+							}
+							$title_chi = $slide2['title_chi'];
+							$title_eng = $slide2['title_eng'];
+							$excerpt2 = $slide2['excerpt2'];
+							$img2 = $slide2['img2']['url'];
+							$link = $slide2['link'];
+							$link_fb = $slide2['link_fb'];
+							$link_ig = $slide2['link_line'];
+					?>
 
-				<div class="carousel-item active" data-bs-interval="5000">
-					<div class="box">
-						<img src="<?echo $img_path;?>logo/media-logo-1.png" alt="">
-						<div class="box-content">
-							<a class="box-title">泛科學</a>
-							<a class="box-title2">PanSci</a>
-							<ul class="icon">
-                                      <li><a href="https://pansci.asia/" target="_blank" class="fa fa-link" target="_blank"></a></li>
-                                      <li><a href="https://www.facebook.com/PanSci" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
-                                      <li><a herf="https://page.line.me/ghl8230y" target="_blank" class="fab fa-line" target="_blank"></a></li>
-                            </ul>
-							<div class="description">
-							PanSci 泛科學 為台灣最大的科學網站及知識社群。我們認為科學無處不在，卻常常在重要議題的討論當中缺席；因此我們致力提供科學、知識討論的最佳場合，並邀請科學研究者、教育者、愛好者、以及所有受科學影響的人們，共同暢談科學、理性思考議題中的科學面向。我們也認為科學應該面向大眾，要能解決大眾的問題，並且讓解決問題本身變成一種樂趣。
+					<div class="carousel-item <?php echo $active;?> img-brightness" data-bs-interval="5000">
+						<div class="box">
+							<img src="<?echo $img2;?>" alt="">
+							<div class="box-content">
+								<a class="box-title"><?echo $title_chi;?></a>
+								<a class="box-title2"><?echo $title_eng;?></a>
+								<ul class="icon">
+										<li><a href="<?echo $link;?>" target="_blank" class="fa fa-link" target="_blank"></a></li>
+										<li><a href="<?echo $link_fb;?>" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
+								</ul>
+								<div class="description">
+									<?echo $excerpt2;?>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+					<?php
+					$i++;
+				}
+				?>
 
-				<div class="carousel-item" data-bs-interval="5000">
-					<div class="box">
-						<img src="<?echo $img_path;?>logo/media-logo-2.png" alt="">
-						<div class="box-content">
-							<a class="box-title">泛科技</a>
-							<a class="box-title2">PanX</a>
-							<ul class="icon">
-                                    <li><a href="https://panx.asia/" class="fa fa-link" target="_blank"></a></li>
-                                    <li><a href="https://www.facebook.com/panx.asia" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
-                            </ul>
-							<div class="description">
-								PanX 泛科技聚焦新能源、金融科技、生物科技、物聯網、大數據、工業4.0等主題，以數位科技發展、創新創業、產業應用、科技生活等不同角度，將科技對未來的影響做最深入、最完整的覆蓋。時常舉辦講座與主題會展，促進科技產業與趨勢關注者學習與溝通。
-							</div>
-						</div>
+				<div class="d-flex justify-content-between">
+					<div class="carousel-2">
+						<i href="#" class="fas fa-angle-left"  data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"></i>
+						<i herf="#" class="fas fa-angle-right"  data-bs-target="#carouselExampleIndicators" data-bs-slide="next"></i>          
 					</div>
 				</div>
 
-				<div class="carousel-item" data-bs-interval="5000">
-					<div class="box">
-						<img src="<?echo $img_path;?>logo/media-logo-3.png" alt="">
-						<div class="box-content">
-							<a class="box-title">娛樂重擊</a>
-							<a class="box-title2">Punchline</a>
-							<ul class="icon">
-                                    <li><a href="http://punchline.asia/" target="_blank" class="fa fa-link" target="_blank"></a></li>
-                                    <li><a href="https://www.facebook.com/Punchline.asia" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
-                            </ul>
-							<p class="description">
-							Punchline 娛樂重擊是台灣最大的垂直影視音產業媒體，提供最可靠、專業的觀點與訊息，致力於傳承與提升產業知識。我們看見全球的影視音娛樂產業正劇烈變動，而我們試圖利用新的方式來應對改變。誠摯邀請關注娛樂產業未來，對發展產業有高度熱誠的媒體人、科技人、創作者、產業人士加入我們！
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="carousel-item" data-bs-interval="5000">
-				<div class="box">
-					<img src="<?echo $img_path;?>logo/media-logo-4.png" alt="">
-					<div class="box-content">
-						<a class="box-title">美食加</a>
-						<a class="box-title2">Taster</a>
-						<ul class="icon">
-                                  <li><a href="https://taster.life/" class="fa fa-link" target="_blank"></a></li>
-                                  <li><a href="https://www.facebook.com/tasterlovesfood" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
-                        </ul>
-						<div class="description">
-							美食是我們最重要的身分認同。即時頭條、流行趨勢、娛樂情報、消費指南、專家觀點，通通報給你知，當然，主題都是吃。「Taster 美食加」是 Liz 高琹雯 在 2018 年成立的美食垂直媒體，將擴大發揮她在「美食家的自學之路 Self-taught Gourmet」累積的經驗。「美食加」因此是美食家的延伸，希望用美食的加法把人與美好的事物串連起來。
-						</div>
-					</div>
-				</div>
 			</div>
-
-			<div class="carousel-item" data-bs-interval="5000">
-				<div class="box">
-					<img src="<?echo $img_path;?>logo/media-logo-5.png" alt="">
-					<div class="box-content">
-						<a class="box-title">旅飯</a>
-						<a class="box-title2">Pantravel</a>
-						<ul class="icon">
-                                <li><a href="http://pantravel.life/" target="_blank" class="fa fa-link"></a></li>
-                                <li><a href="https://www.facebook.com/PanTravelTW" target="_blank" class="fab fa-facebook-f" target="_blank"></a></li>
-                        </ul>
-						<p class="description">
-						Pantravel 旅飯，是專注台灣，發掘日本，旁及泛亞太區域等米食國家的新媒體。我們試圖創造令你耳目一新的旅遊體驗與思維，摸索出最適合台灣旅遊產業發展的藍圖。旅飯企圖在旅遊產業注入新血，不論面對群眾與面對產業都能佔有一席之地。
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="d-flex justify-content-between">
-				<div class="carousel-2">
-					<i href="#" class="fas fa-angle-left"  data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"></i>
-					<i herf="#" class="fas fa-angle-right"  data-bs-target="#carouselExampleIndicators" data-bs-slide="next"></i>          
-				</div>
-			</div>
-
 		</div>
-		</div>
-	</div>
-	</div>
+	 </div>
+   </div>
 </div>
 
 <img src="<?echo $img_path;?>bg/green-bg-1.svg" class="bg-img2 w-100">
@@ -305,69 +265,65 @@ get_header(); ?>
 <!-- 教育事業 -->
 <div class="container pb-lg-5" id="anchor-edu">
 <div class="row py-lg-5">
-	<h2 class="text-lightblue-lg text-center pt-lg-5 pb-lg-3">教育事業</h2>
-	<h4 class="text-grey-lg text-left mt-2 pb-lg-3 px-4">泛科學院有全台串聯的創新基地、實體教室與線上課程，泛科活動是功能完備的活動報名平台，服務各界講座與國際論壇主辦方，並且我們向下紮根科普素養，聯手南一書局與科學月刊打造國中生專業科學閱讀素養課程平台「科學生」。</h4>
+	<h2 class="text-lightblue-lg text-center pt-lg-5 pb-lg-3"><?php echo get_field('home-div-title-4','option'); ?></h2>
+	<h4 class="text-grey-lg text-left mt-2 pb-lg-3 px-4"><?php echo get_field('home-div-content-4','option'); ?></h4>
 </div>      
+
 	<div id="carouselExampleIndicators3" class="carousel slide row" data-bs-ride="carousel3">
 		<div class="pt-3 offset-lg-2 col-lg-5 col-12">
 		
 			<div class="carousel-indicators" id="indicators3">
-				<button  data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
-				<button  data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button  data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" aria-label="Slide 3" class="active" ></button>
+				<?php 
+					$slides_brand_2 = get_field('slides_brand_2','option');
+					$count = count($slides_brand_2);
+					for ($i = 0; $i < $count; $i++){
+						$active = '';	
+						if ($i === 0) {
+							$active = 'active';
+						}
+						?>
+						<button data-bs-target="#BannerCarousel" class="<?php echo $active?>" data-bs-slide-to="<?php echo $i;?>" aria-label="Slide <?php echo $i+1;?>"></button>
+						<?php
+					}					
+				?>
 			</div>
 
 			<div class="carousel-inner pt-3 px-5">
+				<?php
+					$i = 0;
+					foreach($slides_brand_2 as $slide3){
+						$active = '';
+						if($i === 0) {
+							$active = 'active';
+						}
+						$title_chi3 = $slide3['title_chi3'];
+						$title_eng3 = $slide3['title_eng3'];
+						$excerpt3 = $slide3['excerpt3'];
+						$img3 = $slide3['img3']['url'];
+						$link3 = $slide3['link3'];
+						$link_fb3 = $slide3['link_fb3'];
+						$link_ig3 = $slide3['link_line3'];
+				?>
 
-				<div class="carousel-item" data-bs-interval="5000">
-					<div class="box">
-					<img src="<?echo $img_path;?>logo/edu-logo-1.png" alt="">
-					<div class="box-content">
-						<a class="box-title">泛科學院</a>
-						<a class="box-title2">Panschool</a>
-						<ul class="icon">
-							<li><a href="https://panschool.asia/" class="fa fa-link" target="_blank"></a></li>
-						</ul>
-						<p class="description">
-							PanGOGO 知識購是一個專為知識變現者誕生的解決方案，讓你用最輕鬆、最能掌控個人品牌的方式，放心打造只屬於你的全功能站點。你可以立即向粉絲販售線上課程、電商購物、創作訂閱方案、活動票券，或讓他們透過贊助表示支持。你將擁有完整的資料跟分析權限，同時跟使用其他平台一樣不費力氣。
-						</p>
+					<div class="carousel-item <?php echo $active;?> img-brightness" data-bs-interval="5000">
+						<div class="box">
+							<img src="<?echo $img3;?>" alt="">
+							<div class="box-content">
+								<a class="box-title"><?echo $title_chi3;?></a>
+								<a class="box-title2"><?echo $title_eng3;?></a>
+								<ul class="icon">
+										<li><a href="<?echo $link3;?>" target="_blank" class="fa fa-link" target="_blank"></a></li>
+								</ul>
+								<div class="description">
+									<?echo $excerpt3;?>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="carousel-item" data-bs-interval="5000">
-					<div class="box">
-					<img src="<?echo $img_path;?>logo/edu-logo-2.png" alt="">
-					<div class="box-content">
-						<a class="box-title">泛科活動</a>
-						<a class="box-title2">PanMarket</a>
-						<ul class="icon">
-							<li><a href="https://events.panmedia.asia/" class="fa fa-link" target="_blank"></a></li>
-							<li><a href="https://www.facebook.com/panmarket.asia/" class="fab fa-facebook-f" target="_blank"></a></li>
-						</ul>
-						<p class="description">
-							泛科市集為集團旗下的電子商務平台，我們精選優質商品，訴求以運用科學知識，同時具創意、設計感、趣味性等元素為主，我們也鼓勵創客（maker）實作與手作產品。泛科市集以「生活化」為核心精神，藉由介紹與銷售選物，傳達科普知識與體驗，將科普推廣融入生活中。
-						</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="carousel-item active" data-bs-interval="3200">
-					<div class="box">
-						<img src="<?echo $img_path;?>logo/edu-logo-3.png" alt="">
-						<div class="box-content">
-							<a class="box-title">科學生</a>
-							<a class="box-title2">PanSci Student</a> 
-							<ul class="icon">
-							<li><a href="https://student.pansci.asia/" class="fa fa-link" target="_blank"></a></li>
-							<li><a href="https://www.facebook.com/Student.PanSci/" class="fab fa-facebook-f" target="_blank"></a></li>
-							</ul>
-							<p class="description">
-							科學生是由泛科學、南一書局與科學月刊聯合打造的線上學習平台，提供搭配課程進度的「科普閱讀」文章與題組，幫助孩子掌握關鍵資訊，並透過不定期的新知補充，與科學潮流接軌。
-							</p>
-						</div>
-					</div>
-				</div>
+					<?php
+					$i++;
+				}
+				?>
 
 				<div class="d-flex justify-content-between">
 					<div class="carousel-4">
@@ -382,6 +338,7 @@ get_header(); ?>
 </div>
 </div>
 
+
 <img src="<?echo $img_path;?>bg/blue-bg-4.svg" class="bg-img6">
 <img src="<?echo $img_path;?>bg/event-4.svg" class="bg-img7">
 
@@ -394,24 +351,24 @@ get_header(); ?>
 			  <!-- 媒體合作案例 -->
 				<div class="carousel-item active" data-bs-interval="5000">
 						<div class="row col-lg-12 py-lg-5">
-							<h2 class="text-lightblue-lg text-center pt-4 pb-2">媒體合作案例</h2>
+							<h2 class="text-lightblue-lg text-center pt-4 pb-2"><?php echo get_field('slides_b1_title','option'); ?></h2>
 						</div>
 
 						<div id="case-box-size">
 							<div class="row">
 								<div class="offset-lg-2 col-lg-4 col-12 video-size">
 									<div class="card-adj">
-										<iframe width="100%" height="200px" class="rounded-3" src="https://www.youtube.com/embed/XfhXAMth-F8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										<iframe width="100%" height="200px" class="rounded-3" src="<?php echo get_field('case1-1-url','option'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 										<div class="card-body">
-										<h5 class="text-darkblue-sm">家樂福食物轉型計畫</h5>
+										<h5 class="text-darkblue-sm"><?php echo get_field('case1-1-text','option'); ?></h5>
 										</div>
 									</div>
 								</div>
 								<div class="col-lg-4 col-12 video-size">
 									<div class="card-adj">
-										<iframe width="100%" height="200px" class="rounded-3" src="https://www.youtube.com/embed/bn5JxRDPsU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										<iframe width="100%" height="200px" class="rounded-3" src="<?php echo get_field('case1-2-url','option'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 										<div class="card-body">
-										<h5 class="text-darkblue-sm">蔡司最新鑽金藍光防護鏡片</h5>
+										<h5 class="text-darkblue-sm"><?php echo get_field('case1-2-text','option'); ?></h5>
 										</div>
 									</div>
 								</div>
@@ -421,18 +378,18 @@ get_header(); ?>
 							<div class="row">
 								<div class="offset-lg-2 col-lg-4 col-12 video-size">
 									<div class="card-adj">
-										<iframe width="100%" height="200px" class="rounded-3" src="https://www.youtube.com/embed/7xl0_sNuUbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										<iframe width="100%" height="200px" class="rounded-3" src="<?php echo get_field('case1-3-url','option'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 										<div class="card-body">
-										<h5 class="text-darkblue-sm">花仙子香氛 原來香味這麼來！</h5>
+										<h5 class="text-darkblue-sm"><?php echo get_field('case1-3-text','option'); ?></h5>
 										</div>
 									</div>
 								</div>
 
 								<div class="col-lg-4 col-12 video-size">
 									<div class="card-adj">
-										<iframe width="100%" height="200px" class="rounded-3" src="https://www.youtube.com/embed/uEEY_cmmNs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										<iframe width="100%" height="200px" class="rounded-3" src="<?php echo get_field('case1-4-url','option'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 										<div class="card-body">
-										<h5 class="text-darkblue-sm">MSI微星科技 黃金比例螢幕</h5>
+										<h5 class="text-darkblue-sm"><?php echo get_field('case1-4-text','option'); ?></h5>
 										</div>
 									</div>
 								</div>
@@ -446,25 +403,25 @@ get_header(); ?>
 			  <!-- 公共合作案例 -->				
 				<div class="carousel-item" data-bs-interval="4000">
 					<div class="row col-lg-12 py-lg-5">
-						<h2 class="text-lightblue-lg text-center pt-4 pb-2">公共合作案例</h2>
+						<h2 class="text-lightblue-lg text-center pt-4 pb-2"><?php echo get_field('slides_b2_title','option'); ?></h2>
 					</div>
 
 					<div id="case-box-size">
 						<div class="row">
 							<div class="offset-lg-2 col-lg-4 col-12 video-size">
 								<div class="card-adj">
-									<iframe width="100%" height="200px" class="rounded-3" src="https://www.youtube.com/embed/083rXWPZnxg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<iframe width="100%" height="200px" class="rounded-3" src="<?php echo get_field('case2-1-url','option'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									<div class="card-body px-0">
-										<h5 class="text-darkblue-sm">財政部綜合所得稅手機報稅</h5>
+										<h5 class="text-darkblue-sm"><?php echo get_field('case2-1-text','option'); ?></h5>
 									</div>
 								</div>
 							</div>
 
 							<div class="col-lg-4 video-size">
 								<div class="card-adj">
-									<iframe width="100%" height="200px" class="rounded-3" src="https://www.youtube.com/embed/NnrU1zMeK6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									<iframe width="100%" height="200px" class="rounded-3" src="<?php echo get_field('case2-2-url','option'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									<div class="card-body px-0">
-										<h5 class="text-darkblue-sm">行政院農委會動植物防疫檢疫局「2020年植物健康年」</h5>
+										<h5 class="text-darkblue-sm"><?php echo get_field('case2-2-text','option'); ?></h5>
 									</div>
 								</div>
 							</div>
@@ -474,18 +431,18 @@ get_header(); ?>
 						<div class="row">
 							<div class="offset-lg-2 col-lg-4 col-12 video-size">
 								<div class="card-adj">
-									<img width="100%" height="200px" class="rounded-3" src="<?echo $img_path;?>cooperation/case-2.jpg" class="img-fit-screen" alt="...">
+									<img width="100%" height="200px" class="rounded-3" src="<?php echo get_field('case2-3-url','option'); ?>" class="img-fit-screen" alt="...">
 									<div class="card-body px-0">
-										<h5 class="text-darkblue-sm">高雄市政府時尚MIT產業創客人才培育計畫</h5>
+										<h5 class="text-darkblue-sm"><?php echo get_field('case2-3-text','option'); ?></h5>
 									</div>
 								</div>
 							</div>
 
 							<div class="col-lg-4 video-size">
 								<div class="card-adj">
-									<img width="100%" height="200px" class="rounded-3" src="<?echo $img_path;?>cooperation/case-4.jpg">
+									<img width="100%" height="200px" class="rounded-3" src="<?php echo get_field('case2-4-url','option'); ?>">
 									<div class="card-body px-0">
-										<h5 class="text-darkblue-sm">地方創生與社會企業群眾募資專業輔導案</h5>
+										<h5 class="text-darkblue-sm"><?php echo get_field('case2-4-text','option'); ?></h5>
 									</div>
 								</div>
 							</div>
@@ -497,7 +454,7 @@ get_header(); ?>
 			  <!-- 大型活動案例 -->					
 				<div class="carousel-item" data-bs-interval="4000">
 					<div class="row col-lg-12 py-lg-5">
-						<h2 class="text-lightblue-lg text-center pt-4 pb-2">大型活動案例</h2>
+						<h2 class="text-lightblue-lg text-center pt-4 pb-2"><?php echo get_field('slides_b3_title','option'); ?></h2>
 					</div>
 
 					<div id="case-box-size">
@@ -506,8 +463,8 @@ get_header(); ?>
 								<div class="card-adj">
 									<img src="<?echo $img_path;?>event-1.jpg" class="case-img-size" alt="...">
 									<div class="card-body">
-									<h5 class="text-darkblue-sm">2015至2019年 泛·知識節</h5>
-									<h6>「泛知識節」為泛科知識召集之年度大型活動，承繼 PanSci 泛科學年會的精神與架構。</h6>
+									<h5 class="text-darkblue-sm"><?php echo get_field('case3-1-text','option'); ?></h5>
+									<h6><?php echo get_field('case3-1-content','option'); ?></h6>
 									</div>
 								</div>
 							</div>
@@ -516,8 +473,8 @@ get_header(); ?>
 								<div class="card-adj">
 									<img src="<?echo $img_path;?>event-2.jpg" class="case-img-size" alt="...">
 									<div class="card-body">
-									<h5 class="text-darkblue-sm">NPOst年會</h5>
-									<h6>世界最大NGO「:BRAC」執行長法雷茲爵士來台演講。</h6>
+									<h5 class="text-darkblue-sm"><?php echo get_field('case3-2-text','option'); ?></h5>
+									<h6><?php echo get_field('case3-2-content','option'); ?></h6>
 									</div>
 								</div>
 							</div>
@@ -539,7 +496,7 @@ get_header(); ?>
 <!-- 我們的客戶／品牌牆 -->					
 	<div class="container">
 		<div class="row col-lg-12 py-lg-5">
-			<h2 class="text-lightblue-lg text-center pt-4 pb-2">我們的客戶</h2>
+			<h2 class="text-lightblue-lg text-center pt-4 pb-2"><?php echo get_field('brand-icon-title','option'); ?></h2>
 				</div>
 
 					<table class="table brand-table-size">
@@ -609,27 +566,27 @@ get_header(); ?>
 		<div class="col-lg-6 col-12">
 		<div class="input-group mb-3">
 			<span class="input-group-text" id="basic-addon0"><?php echo get_field('forms-q1','option'); ?></span>
-			<input type="text" class="form-control" placeholder="<?php echo get_field('forms-a1','option'); ?>" aria-label="Name" aria-describedby="basic-addon0">
+			<input required="required" type="text" class="form-control" placeholder="<?php echo get_field('forms-a1','option'); ?>" aria-label="Name" aria-describedby="basic-addon0">
 		</div>
 
 		<div class="input-group mb-3">
 			<span class="input-group-text" id="basic-addon1"><?php echo get_field('forms-q2','option'); ?></span>
-			<input type="text" class="form-control" placeholder="<?php echo get_field('forms-a2','option'); ?>" aria-label="Job" aria-describedby="basic-addon1">
+			<input required="required" type="text" class="form-control" placeholder="<?php echo get_field('forms-a2','option'); ?>" aria-label="Job" aria-describedby="basic-addon1">
 		</div>
 
 		<div class="input-group mb-3">
 			<span class="input-group-text" id="basic-addon2"><?php echo get_field('forms-q3','option'); ?></span>
-			<input type="text" class="form-control" placeholder="<?php echo get_field('forms-a3','option'); ?>" aria-label="CompanyName" aria-describedby="basic-addon2">
+			<input required="required" type="text" class="form-control" placeholder="<?php echo get_field('forms-a3','option'); ?>" aria-label="CompanyName" aria-describedby="basic-addon2">
 		</div>
 		
 		<div class="input-group mb-3">
 			<span class="input-group-text" id="basic-addon3"><?php echo get_field('forms-q4','option'); ?></span>
-			<input type="text" class="form-control" placeholder="<?php echo get_field('forms-a4','option'); ?>" aria-label="eMail" aria-describedby="basic-addon3">
+			<input required="required" type="text" class="form-control" placeholder="<?php echo get_field('forms-a4','option'); ?>" aria-label="eMail" aria-describedby="basic-addon3">
 		</div>
 
 		<div class="input-group mb-3">
 			<span class="input-group-text" id="basic-addon4"><?php echo get_field('forms-q5','option'); ?></span>
-			<input type="text" class="form-control" placeholder="<?php echo get_field('forms-a5','option'); ?>" aria-label="PhoneNumber" aria-describedby="basic-addon4">
+			<input required="required" type="text" class="form-control" placeholder="<?php echo get_field('forms-a5','option'); ?>" aria-label="PhoneNumber" aria-describedby="basic-addon4">
 		</div>
 
 		<div class="input-group">

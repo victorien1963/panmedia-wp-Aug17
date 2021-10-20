@@ -54,7 +54,7 @@ if ( ! class_exists( 'VB_Theme_Public_General' ) ) {
                 ));
 
             // Banner輪播
-            acf_add_options_page(array(
+                acf_add_options_page(array(
                 'page_title' 	=> '網站Logo',
                 'menu_title'	=> '網站Logo',
                 'menu_slug' 	=> 'Top-logo-settings',
@@ -74,7 +74,7 @@ if ( ! class_exists( 'VB_Theme_Public_General' ) ) {
                 ));
 
             // 區塊標題與內容
-            acf_add_options_page(array(
+                acf_add_options_page(array(
                 'page_title' 	=> '區塊標題與內容',
                 'menu_title'	=> '區塊標題與內容',
                 'menu_slug' 	=> 'home-div-title',
@@ -93,8 +93,18 @@ if ( ! class_exists( 'VB_Theme_Public_General' ) ) {
                 'redirect'		=> false
                 ));
 
+            // 客戶品牌牆
+                acf_add_options_page(array(
+                'page_title' 	=> '客戶品牌牆',
+                'menu_title'	=> '客戶品牌牆',
+                'menu_slug' 	=> 'home-cooper-icons',
+                'parent_slug'   => 'home-theme-settings',
+                'capability'	=> 'manage_options',
+                'redirect'		=> false
+                ));
+
             // 回傳表單
-            acf_add_options_page(array(
+                acf_add_options_page(array(
                 'page_title' 	=> '表單內容',
                 'menu_title'	=> '表單內容',
                 'menu_slug' 	=> 'home-forms',

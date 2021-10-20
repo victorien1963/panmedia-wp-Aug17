@@ -828,6 +828,13 @@ body{
     }
 } 
 
+.input-group-text{
+    width: 6.3rem;
+    display: inline-block;
+    text-align: justify;
+    text-align-last: justify;
+}
+
 @include media-breakpoint-up(xs) {
 
 }
