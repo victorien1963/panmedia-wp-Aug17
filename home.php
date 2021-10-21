@@ -497,7 +497,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row col-lg-12 py-lg-5">
 			<h2 class="text-lightblue-lg text-center pt-4 pb-2"><?php echo get_field('brand-icon-title','option'); ?></h2>
-				</div>
+				</div> 
 
 					<table class="table brand-table-size">
 							<tbody>
