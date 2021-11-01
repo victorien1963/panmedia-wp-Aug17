@@ -547,7 +547,6 @@ get_header(); ?>
 			</div>
 
 <img src="<?echo $img_path;?>bg/contact-1.svg" class="bg-img8">
-<img src="<?echo $img_path;?>bg/blue-bg-5.svg" class="bg-img9">
 
 
 <!-- 聯絡我們 -->    
