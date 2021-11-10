@@ -315,7 +315,7 @@ body{
     }
 
     .bg-img5{
-        opacity: .2;
+        opacity: .1;
         width: 100%;
         right: 0%;
         margin-top: 14rem;
@@ -329,7 +329,7 @@ body{
     }
 
     .bg-img8{
-        margin-top: 5rem;
+        margin-top: 0;
         width: 80%;
         opacity: 0.3;
     }
@@ -480,6 +480,7 @@ body{
         font-weight: 800;
         font-size: 1.5rem;
         text-align: center;
+        margin-top: 5rem;
     }
 
     .text-lightblue-sm{
@@ -560,7 +561,7 @@ body{
 .box{
     overflow: hidden;
     position: relative;
-    height: 20rem;
+    height: 22rem;
 }
 
 #box2 {
@@ -596,7 +597,7 @@ body{
 
 /* Images */
 .box img{
-    padding-top: 9.5rem;
+    padding-top: 7rem;
     width: 100%;
     height: auto;
     transition: all 0.3s ease-out 0s;
@@ -613,20 +614,21 @@ body{
 }
 
 /* Content */
-.box .box-content{
+.box > div{
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
     z-index: 7;
 }
 
-#box2 .box-content{
-    padding: 3rem;
+#box2 > div{
+    padding: 2rem;
+    top: 0%;
 }
 
-#box3 .box-content{
+#box3 > .box-content{
     border-radius: 50%;
     width: 100%;
     height: 100%;
@@ -786,12 +788,16 @@ body{
         margin-bottom: 30px;
     }
 
+    .box .box-title2 {
+        font-size: 1rem;
+    }
+
     .box .description {
-        height: 8rem;       
+        height: 10rem;       
     }
     
     .box img{
-        padding-top: 3.5rem;
+        padding-top: 5.5rem;
     }
 
     #box2 {
@@ -825,6 +831,10 @@ body{
         padding-right: 1.5rem;
         margin-bottom: 0rem;
     }
+
+    .box > div{
+        top: 12%;
+    }
 } 
 
 .input-group-text{
@@ -837,6 +847,18 @@ body{
 @media only screen and (max-width: 360px){
     .buz-scope > a > i {
         padding-top: 1rem;
+    }
+
+    .box img {
+        padding-top: 8rem;
+    }
+
+    .box .box-title {
+        font-size: 1.3rem;
+    }
+
+    .box .box-title2 {
+        font-size: .9rem;
     }
 }
 

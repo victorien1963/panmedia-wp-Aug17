@@ -15,17 +15,17 @@ $img_path = VB_THEME_URI.'src/imgs/';
       <table class="table">
         <tbody>
           <tr>
-            <td><a href="<?php echo get_field('footer1-icon1-url','option'); ?>" type="button" target="_blank"><img src="<?php echo get_field('footer1-icon1','option'); ?>"></a></td>
-            <td><a href="<?php echo get_field('footer1-icon2-url','option'); ?>" type="button" target="_blank"><img src="<?php echo get_field('footer1-icon2','option'); ?>"></a></td>
-            <td><a href="<?php echo get_field('footer1-icon3-url','option'); ?>" type="button" target="_blank"><img src="<?php echo get_field('footer1-icon3','option'); ?>"></a></td>
-            <td><a href="<?php echo get_field('footer1-icon4-url','option'); ?>" type="button" target="_blank"><img src="<?php echo get_field('footer1-icon4','option'); ?>"></a></td>
-            <td><a href="<?php echo get_field('footer1-icon5-url','option'); ?>" type="button" target="_blank"><img src="<?php echo get_field('footer1-icon5','option'); ?>"></a></td>
-            <td><a href="<?php echo get_field('footer1-icon6-url','option'); ?>" type="button" target="_blank"><img src="<?php echo get_field('footer1-icon6','option'); ?>"></a></td>
-            <td><a href="<?php echo get_field('footer1-icon7-url','option'); ?>" type="button" target="_blank"><img src="<?php echo get_field('footer1-icon7','option'); ?>"></a></td>
-            <td><a href="<?php echo get_field('footer1-icon8-url','option'); ?>" type="button" target="_blank"><img src="<?php echo get_field('footer1-icon8','option'); ?>"></a></td>
-            <td><a href="<?php echo get_field('footer1-icon9-url','option'); ?>" type="button" target="_blank"><img src="<?php echo get_field('footer1-icon9','option'); ?>"></a></td>
-            <td><a href="<?php echo get_field('footer1-icon10-url','option'); ?>" type="button" target="_blank"><img src="<?php echo get_field('footer1-icon10','option'); ?>"></a></td>
-            <td><a href="<?php echo get_field('footer1-icon11-url','option'); ?>" type="button" target="_blank"><img src="<?php echo get_field('footer1-icon11','option'); ?>"></a></td>
+            <td><a href="<?php echo get_field('footer1-icon1-url','option'); ?>" target="_blank"><img src="<?php echo get_field('footer1-icon1','option'); ?>"></a></td>
+            <td><a href="<?php echo get_field('footer1-icon2-url','option'); ?>" target="_blank"><img src="<?php echo get_field('footer1-icon2','option'); ?>"></a></td>
+            <td><a href="<?php echo get_field('footer1-icon3-url','option'); ?>" target="_blank"><img src="<?php echo get_field('footer1-icon3','option'); ?>"></a></td>
+            <td><a href="<?php echo get_field('footer1-icon4-url','option'); ?>" target="_blank"><img src="<?php echo get_field('footer1-icon4','option'); ?>"></a></td>
+            <td><a href="<?php echo get_field('footer1-icon5-url','option'); ?>" target="_blank"><img src="<?php echo get_field('footer1-icon5','option'); ?>"></a></td>
+            <td><a href="<?php echo get_field('footer1-icon6-url','option'); ?>" target="_blank"><img src="<?php echo get_field('footer1-icon6','option'); ?>"></a></td>
+            <td><a href="<?php echo get_field('footer1-icon7-url','option'); ?>" target="_blank"><img src="<?php echo get_field('footer1-icon7','option'); ?>"></a></td>
+            <td><a href="<?php echo get_field('footer1-icon8-url','option'); ?>" target="_blank"><img src="<?php echo get_field('footer1-icon8','option'); ?>"></a></td>
+            <td><a href="<?php echo get_field('footer1-icon9-url','option'); ?>" target="_blank"><img src="<?php echo get_field('footer1-icon9','option'); ?>"></a></td>
+            <td><a href="<?php echo get_field('footer1-icon10-url','option'); ?>" target="_blank"><img src="<?php echo get_field('footer1-icon10','option'); ?>"></a></td>
+            <td><a href="<?php echo get_field('footer1-icon11-url','option'); ?>" target="_blank"><img src="<?php echo get_field('footer1-icon11','option'); ?>"></a></td>
           </tr>
 
           <tr>

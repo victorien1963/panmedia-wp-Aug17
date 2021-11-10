@@ -45,12 +45,12 @@ get_header(); ?>
 						$thumbnail = $slide['thumbnail']['url'];
 				?>
 
-				<div class="carousel-item <?php echo $active;?> img-brightness" data-bs-interval="5000">
+				<div class="carousel-item <?php echo $active;?> img-brightness" data-bs-interval="5000" style="background-image: url('<?php echo $thumbnail;?>');">
 					<div class="carousel-caption-adj d-md-block">
 						<h2><?php echo $title;?></h2>
 						<p><?php echo $excerpt;?></p>
 					</div>
-					<img src="<?php echo $thumbnail;?>" class="d-block carousel-img-size" alt="...">
+					<!-- <img src="<?php echo $thumbnail;?>" class="d-block carousel-img-size" alt="..."> -->
 				</div>
 				<?php
 				$i++;
@@ -90,7 +90,7 @@ get_header(); ?>
 	<h2 class="pb-2 text-center text-lightblue-lg">
 		<?php echo get_field('home-div-title-1','option'); ?>
 	</h2>
-	<h4 class="text-grey-lg text-center pt-lg-2 pb-4">
+	<h4 class="text-grey-lg text-md-center pt-lg-2 pb-4">
 		<?php echo get_field('home-div-content-1','option'); ?>
 	</h4>
 	</div>
@@ -174,7 +174,7 @@ get_header(); ?>
 							$link_ig = $slide2['link_line'];
 					?>
 
-					<div class="carousel-item <?php echo $active;?> img-brightness" data-bs-interval="5000">
+					<div class="carousel-item <?php echo $active;?> img-brightness2" data-bs-interval="5000">
 						<div class="box">
 							<img src="<?echo $img2;?>" alt="">
 							<div class="box-content">
@@ -218,7 +218,7 @@ get_header(); ?>
 	<h2 class="pt-5 pb-3 text-center text-lightblue-lg">
 		<?php echo get_field('home-div-title-3','option'); ?>
 	</h2>
-	<h4 class="text-grey-lg text-center mt-2 pb-lg-3 pt-lg-1 pb-5">
+	<h4 class="text-grey-lg text-md-center mt-2 pb-lg-3 pt-lg-1 pb-5">
 		<?php echo get_field('home-div-content-3','option'); ?>
 	</h4>
 </div>
@@ -305,7 +305,7 @@ get_header(); ?>
 						$link_ig3 = $slide3['link_line3'];
 				?>
 
-					<div class="carousel-item <?php echo $active;?> img-brightness" data-bs-interval="5000">
+					<div class="carousel-item <?php echo $active;?> img-brightness2" data-bs-interval="5000">
 						<div class="box">
 							<img src="<?echo $img3;?>" alt="">
 							<div class="box-content">
