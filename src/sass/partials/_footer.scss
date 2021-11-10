@@ -79,6 +79,7 @@ footer.main-footer {
     margin: 0rem;
     text-decoration: none;
     opacity: 1;
+    background-color: transparent;
 }
 
 .footer-icons-table > table > tbody > tr > td > a > img:hover {
@@ -91,7 +92,7 @@ footer.main-footer {
 
 /*創客基地*/
 
-.mark-link > div {
+.mark-link > a {
     align-self: center;
     text-align: left; 
     color: #f8f8f8;
@@ -102,7 +103,7 @@ footer.main-footer {
     margin-right: 1rem;
 }
 
-.mark-link > div:hover {
+.mark-link > a:hover {
     color: #176a83;
 }
 
@@ -148,7 +149,7 @@ footer.main-footer {
         flex-wrap: nowrap;
     }
 
-    .mark-link > div {
+    .mark-link > a {
         font-size: .9rem;
         text-align: center;
         margin-right: 0rem;
@@ -166,4 +167,18 @@ footer.main-footer {
         padding: .5rem .7rem;
     }
 
+}
+
+@media only screen and (max-width: 360px){
+    .socialmedia-icons > a{
+        font-size: 2.4rem;
+        padding: .5rem;
+    }
+
+    .mark-link > a {
+        padding-left: .2rem;
+        padding-right: .2rem;
+        font-size: .8rem;
+    }
+    
 }

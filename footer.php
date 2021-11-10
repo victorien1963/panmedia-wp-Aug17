@@ -65,9 +65,9 @@ $img_path = VB_THEME_URI.'src/imgs/';
     <div class="col-lg-4 col-12 ps-lg-5 ps-3">
       <p class="text-white-lg"><?php echo get_field('footer3-title','option'); ?></p>
         <div class="mark-link text-white row px-0">
-          <div class="col-lg-12 col-4" href="<?php echo get_field('footer3-title_link1_url','option'); ?>" type="button" target="_blank"><?php echo get_field('Footer3-title_link1','option'); ?></div>
-          <div class="col-lg-12 col-4" href="<?php echo get_field('footer3-title_link2_url','option'); ?>" type="button" target="_blank"><?php echo get_field('Footer3-title_link2','option'); ?></div>
-          <div class="col-lg-12 col-4" href="<?php echo get_field('footer3-title_link3_url','option'); ?>" type="button" target="_blank"><?php echo get_field('Footer3-title_link3','option'); ?></div>
+          <a class="col-lg-12 col-4" href="<?php echo get_field('footer3-title_link1_url','option'); ?>" target="_blank"><?php echo get_field('Footer3-title_link1','option'); ?></a>
+          <a class="col-lg-12 col-4" href="<?php echo get_field('footer3-title_link2_url','option'); ?>" target="_blank"><?php echo get_field('Footer3-title_link2','option'); ?></a>
+          <a class="col-lg-12 col-4" href="<?php echo get_field('footer3-title_link3_url','option'); ?>" target="_blank"><?php echo get_field('Footer3-title_link3','option'); ?></a>
         </div>
       </div>
 

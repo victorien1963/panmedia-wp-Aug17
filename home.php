@@ -15,7 +15,7 @@ $img_path = VB_THEME_URI.'src/imgs/';
 get_header(); ?>
 
     <!-- Banner輪播 -->
-		<div id="BannerCarousel" class="carousel slide" data-bs-ride="carousel">
+		<div id="BannerCarousel" class="carousel slide banner-size" data-bs-ride="carousel">
             <div class="carousel-indicators" id="indicators1">
 				<?php 
 					$slides = get_field('slides','option');
@@ -50,7 +50,7 @@ get_header(); ?>
 						<h2><?php echo $title;?></h2>
 						<p><?php echo $excerpt;?></p>
 					</div>
-					<img src="<?php echo $thumbnail;?>" class="d-block w-100 carousel-img-size" alt="...">
+					<img src="<?php echo $thumbnail;?>" class="d-block carousel-img-size" alt="...">
 				</div>
 				<?php
 				$i++;
@@ -95,7 +95,7 @@ get_header(); ?>
 	</h4>
 	</div>
 
-	<div class="row px-lg-5 p-3">
+	<div class="row px-lg-5 p-0">
 		<div class="col-lg-4 col-4 buz-scope" id="bs-1">
 		<a href="#anchor-media">
 			<i class="fas fa-bullhorn fs-1"></i>
