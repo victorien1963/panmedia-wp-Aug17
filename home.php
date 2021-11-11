@@ -60,8 +60,8 @@ get_header(); ?>
 
             <div class="d-flex justify-content-between">
               <div class="carousel-1">
-                  <i href="#" class="fas fa-angle-left" type="button" data-bs-target="#BannerCarousel" data-bs-slide="prev"></i>
-                  <i herf="#" class="fas fa-angle-right" type="button" data-bs-target="#BannerCarousel" data-bs-slide="next"></i>          
+                  <i href="#" class="fas fa-angle-left" data-bs-target="#BannerCarousel" data-bs-slide="prev"></i>
+                  <i herf="#" class="fas fa-angle-right" data-bs-target="#BannerCarousel" data-bs-slide="next"></i>          
               </div>
             </div>
     </div>
