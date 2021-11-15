@@ -782,6 +782,10 @@ body{
     transition-delay: 0.2s;
 }
 
+.g-recaptcha > div {
+    margin: 0;
+}
+
 /* RWD for mobile */
 @media only screen and (max-width: 767px){
     .box { 
@@ -835,14 +839,20 @@ body{
     .box > div{
         top: 12%;
     }
+
+    .input-group-text{
+        width: 6.3rem;
+        display: inline-block;
+        text-align: justify;
+        text-align-last: justify;
+    }
+
+    .g-recaptcha > div {
+        margin: 0 auto;
+    }
 } 
 
-.input-group-text{
-    width: 6.3rem;
-    display: inline-block;
-    text-align: justify;
-    text-align-last: justify;
-}
+
 
 @media only screen and (max-width: 360px){
     .buz-scope > a > i {

@@ -74,7 +74,7 @@ $img_path = VB_THEME_URI.'src/imgs/';
     <!--加入我們-->
     <div class="col-lg-4 col-12 join-us ps-lg-5 ps-3">
       <a href="<?php echo get_field('footer4-link','option'); ?>" class="fas fa-hand-point-right text-white-lg mt-2" target="_blank"> <?php echo get_field('Footer4-title','option'); ?></a>
-      <p class="text-white">
+      <p class="text-white text-decoration-none">
         <?php echo get_field('contact_mail','option'); ?><br/>
         <?php echo get_field('contact_numbers','option'); ?><br/>
         <?php echo get_field('contact_add','option'); ?>
