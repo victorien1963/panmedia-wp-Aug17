@@ -234,9 +234,10 @@ body{
     display: flex;
     justify-content: center;
     align-self: center;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
-    height: 528px;
+    min-height: 70px;
+    max-height: 528px;
 }
 
 
@@ -253,7 +254,8 @@ body{
 }
 
 .brand-table-size > tbody > tr > td > img {
-    width: 85%;
+    max-height: 60px;
+    max-width: 90%;
     text-decoration: none;
 }
 
@@ -329,7 +331,7 @@ body{
     }
 
     .bg-img8{
-        margin-top: 0;
+        margin-top: -35px;
         width: 80%;
         opacity: 0.3;
     }
@@ -385,8 +387,9 @@ body{
    
     /* Cooperation */
     .brand-table-size{
-        height: 560px;
-        overflow-y: scroll;
+        min-height: 70px;
+        max-height: 560px;
+        overflow-y: auto;
         overflow-x: hidden;
     }
 
@@ -786,6 +789,14 @@ body{
     margin: 0;
 }
 
+.input-group-text{
+    width: 6.3rem;
+    display: inline-block;
+    text-align: justify;
+    text-align-last: justify;
+    min-width: 90px;
+}
+
 /* RWD for mobile */
 @media only screen and (max-width: 767px){
     .box { 
@@ -845,6 +856,7 @@ body{
         display: inline-block;
         text-align: justify;
         text-align-last: justify;
+        min-width: 90px;
     }
 
     .g-recaptcha > div {

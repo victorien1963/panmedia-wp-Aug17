@@ -54,7 +54,7 @@ get_header(); ?>
 				</div>
 				<?php
 				$i++;
-			}
+				}
 			?>
             </div> 
 
@@ -90,7 +90,7 @@ get_header(); ?>
 	<h2 class="pb-2 text-center text-lightblue-lg">
 		<?php echo get_field('home-div-title-1','option'); ?>
 	</h2>
-	<h4 class="text-grey-lg text-md-center pt-lg-2 pb-4">
+	<h4 class="text-grey-lg text-md-center pt-lg-2 pb-5">
 		<?php echo get_field('home-div-content-1','option'); ?>
 	</h4>
 	</div>
@@ -500,49 +500,21 @@ get_header(); ?>
 				</div> 
 
 					<table class="table brand-table-size">
-							<tbody>
-								<tr class="row">
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/勞動部.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/財政部.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/中央研究院.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/科技部.png"></td>
-								</tr>
-				
-								<tr class="row">
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/國家通訊傳播委員會.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/行政院農委會動植物防疫檢疫局.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/毒物及化學物質局.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/賦稅署.png"></td>
-								</tr>
-					
-								<tr class="row">
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/交通部鐵道局.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/財團法人資訊工業策進會.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/教育部青年署.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/教育部資訊及科技教育司.png"></td>
-								</tr>
-					
-								<tr class="row">
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/臺北市政府產業發展局.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/台灣農產科技資源運籌管理學會.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/文化部影視及流行音樂產業局.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/財團法人中華航空事業發展基金會.png"></td>
-					
-									<tr class="row">
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/衛生福利部食品藥物管理署.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/利泓科技.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/利眾公關.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/知路公關.png"></td>
-									</tr>
-					
-									<tr class="row">
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/戰國策.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/tronSolutions.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/亞典行銷顧問.png"></td>
-									<td class="col-lg-3"><img src="<?echo $img_path;?>cooperation/高誠公關.png"></td>
-									</tr>        
-							</tbody>
-						</table>
+						<tbody>
+							<?php
+								$fields = get_field('coopera_icons_table','option');
+									foreach($fields as $field){
+										echo '<tr class="row">';										
+										$rows = $field['icons_group'];
+										foreach($rows as $row){
+											$icon = $row['brand_icons'];
+											echo '<td class="col-lg-3"><img src="'.$row['brand_icons'].'"></td>';
+										}
+										echo '</tr>';
+								}
+							?>
+						</tbody>
+					</table>
 				</div>
 			</div>
 
@@ -555,7 +527,7 @@ get_header(); ?>
 		<h2 class="text-lightblue-lg text-center pt-lg-5 pb-lg-3">
 			<?php echo get_field('home-div-title-6','option'); ?>
 		</h2>
-		<h4 class="text-grey-lg text-left mt-2">
+		<h4 class="text-grey-lg text-left my-3">
 			<?php echo get_field('home-div-content-6','option'); ?>
 		</h4>
 	<!--<h5 class="text-danger text-left">*為必填</h5> -->
